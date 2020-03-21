@@ -7,41 +7,39 @@
  */
 
 /* HTML element (SMACSS base) rules */
-@import "normalize.css";
+@import 'normalize.css';
 
 /* Layout rules */
-@import "layouts/responsive.css";
+@import 'layouts/responsive.css';
 
 /* Component (SMACSS module) rules */
-@import "components/misc.css";
-/* Optionally, add your own components here. */
-@import "print.css";
+/* @import 'components/misc.css'; */
 
 /* SMACSS theme rules */
 /* @import "theme-A.css"; */
 /* @import "theme-B.css"; */
-body{
+body {
   margin: auto 0 !important;
 }
 
 /******************** PLAN DU SITE ********************/
 
-.page-plan-du-site .panel-flexible-inside .panels-flexible-region-first{
+.page-plan-du-site .panel-flexible-inside .panels-flexible-region-first {
   width: 100%;
   padding: 0;
   background: none;
 }
-.bloc-plan-site > div > ul.menu:nth-child(1){
+.bloc-plan-site > div > ul.menu:nth-child(1) {
   padding: 0;
 }
 .pane-menu-liens-du-pied-de-page li,
 .pane-menu-main-sidebar li,
 .panels-flexible-region-62-center-inside .pane-menu-menu-secondaire li,
-.bloc-plan-site li{
-  list-style: none!important;
-  list-style-type: none!important;
+.bloc-plan-site li {
+  list-style: none !important;
+  list-style-type: none !important;
 }
-.bloc-plan-site li:nth-child(1) > span{
+.bloc-plan-site li:nth-child(1) > span {
   font-size: 35px;
   text-transform: uppercase;
   text-align: center;
@@ -49,9 +47,10 @@ body{
   width: 100%;
 }
 .bloc-plan-site li.menu__item > span {
-  height: 70px; width: 100%;
+  height: 70px;
+  width: 100%;
   color: white;
-  background:#153d8a;
+  background: #153d8a;
   display: inline-block;
   text-transform: uppercase;
   text-align: center;
@@ -59,7 +58,11 @@ body{
   font-size: 25px;
   padding: 17px 0;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li,
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li,
 .bloc-plan-site > div > ul > li.menu__item {
   width: calc(50% - 20px);
   margin-top: 40px;
@@ -69,22 +72,46 @@ body{
   padding: 0;
 }
 
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li {
   margin-top: 20px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li{
-  width:430px;
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li {
+  width: 430px;
   margin-top: 0;
   overflow: hidden;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li:nth-child(1){
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li:nth-child(1) {
   margin-top: 40px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li ul{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  ul {
   overflow: auto;
   padding: 10px 0 20px 30px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li a{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  a {
   background: #0063af;
   height: 70px;
   width: 100%;
@@ -96,17 +123,32 @@ body{
   padding: 17px 0;
   text-decoration: none;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper > .menu > li>  .menu__link{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  > .menu
+  > li
+  > .menu__link {
   color: #ffffff;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu {
   overflow: auto;
   padding: 0;
   margin: 0;
   float: left;
   width: 485px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li a{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  a {
   /*height: 28px;*/
   font-size: 20px;
   font-weight: 600;
@@ -121,20 +163,38 @@ body{
   height: auto;
 }
 .pane-menu-main-sidebar .menu li a:hover,
-.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page .menu li a:hover,
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li a:hover{
+.panels-flexible-region-62-center-inside
+  .pane-menu-liens-du-pied-de-page
+  .menu
+  li
+  a:hover,
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  a:hover {
   color: #00a2e0;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li a:hover{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  a:hover {
   background-position: 0 5px;
 }
-.pane-menu-main-sidebar{
+.pane-menu-main-sidebar {
   width: calc(50% - 20px);
   margin-top: 40px;
   float: left;
   background: #eef8fd;
 }
-.pane-menu-main-sidebar h2{
+.pane-menu-main-sidebar h2 {
   height: 70px;
   width: 100%;
   display: inline-block;
@@ -147,16 +207,17 @@ body{
   border-bottom: 1px solid #d7d5d6;
   margin-bottom: 0;
 }
-.pane-menu-main-sidebar .menu{
+.pane-menu-main-sidebar .menu {
   margin-top: 15px;
   margin-bottom: 40px;
 }
-.pane-menu-main-sidebar .menu .menu{
+.pane-menu-main-sidebar .menu .menu {
   margin: 10px 0 0 0;
 }
 .pane-menu-main-sidebar .menu li a,
-.pane-menu-main-sidebar .menu li span{
-  height: initial; width: 100%;
+.pane-menu-main-sidebar .menu li span {
+  height: initial;
+  width: 100%;
   font-size: 20px;
   font-weight: 600;
   padding: 10px 22px 0 30px;
@@ -168,63 +229,71 @@ body{
   text-align: initial;
   margin-top: 5px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(1){
+.pane-menu-main-sidebar .menu > li:nth-child(1) {
   background: url('../images/search.png') center left no-repeat;
   background-position: 500px 20px;
   background-size: 18px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(2){
+.pane-menu-main-sidebar .menu > li:nth-child(2) {
   background: url('../images/ermergency.png') center left no-repeat;
   background-position: 500px 20px;
   background-size: 18px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(3){
+.pane-menu-main-sidebar .menu > li:nth-child(3) {
   background: url('../images/hospitals.png') center left no-repeat;
   background-position: 502px 20px;
-   background-size: 18px;
+  background-size: 18px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(4){
+.pane-menu-main-sidebar .menu > li:nth-child(4) {
   background: url('../images/your-health.png') center left no-repeat;
   background-position: 501px 20px;
-    background-size: 18px;
+  background-size: 18px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(5){
-  background: url('https://www.aphp.fr/sites/all/themes/aphp/images/question.png') center left no-repeat;
+.pane-menu-main-sidebar .menu > li:nth-child(5) {
+  background: url('https://www.aphp.fr/sites/all/themes/aphp/images/question.png')
+    center left no-repeat;
   background-position: 501px 20px;
-   background-size: 18px;
+  background-size: 18px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(6){
+.pane-menu-main-sidebar .menu > li:nth-child(6) {
   background: url('../images/relative.png') center left no-repeat;
   background-position: 500px 20px;
-     background-size: 18px;
+  background-size: 18px;
 }
-.pane-menu-main-sidebar .menu > li:nth-child(7){
+.pane-menu-main-sidebar .menu > li:nth-child(7) {
   background: url('../images/donation.png') center left no-repeat;
   background-position: 502px 20px;
   background-size: 18px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page{
-   width: 485px;
+.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page {
+  width: 485px;
   float: left;
-  background: #eef8fd;;
+  background: #eef8fd;
   margin-top: 40px;
   text-align: left;
 }
-.page-plan-du-site .pane-page-content .pane-menu-liens-du-pied-de-page ul li:before{
+.page-plan-du-site
+  .pane-page-content
+  .pane-menu-liens-du-pied-de-page
+  ul
+  li:before {
   content: none;
 }
-.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page .menu-block-wrapper{
+.panels-flexible-region-62-center-inside
+  .pane-menu-liens-du-pied-de-page
+  .menu-block-wrapper {
   width: 100%;
 }
-.page-plan-du-site .pane-page-content .pane-menu-liens-du-pied-de-page > div{
+.page-plan-du-site .pane-page-content .pane-menu-liens-du-pied-de-page > div {
   border: none;
 }
-.page-plan-du-site .pane-page-content .pane-menu-liens-du-pied-de-page ul li{
-      margin-bottom: 20px;
-    display: block;
+.page-plan-du-site .pane-page-content .pane-menu-liens-du-pied-de-page ul li {
+  margin-bottom: 20px;
+  display: block;
 }
-.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page h2{
-  height: 70px; width: 100%;
+.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page h2 {
+  height: 70px;
+  width: 100%;
   display: inline-block;
   text-transform: uppercase;
   text-align: center;
@@ -235,8 +304,16 @@ body{
   margin-bottom: 35px;
   border-bottom: 1px solid #d7d5d6;
 }
-.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page .menu li a,
-.panels-flexible-region-62-center-inside .pane-menu-liens-du-pied-de-page .menu li span{
+.panels-flexible-region-62-center-inside
+  .pane-menu-liens-du-pied-de-page
+  .menu
+  li
+  a,
+.panels-flexible-region-62-center-inside
+  .pane-menu-liens-du-pied-de-page
+  .menu
+  li
+  span {
   height: initial;
   width: 100%;
   font-size: 20px;
@@ -251,7 +328,7 @@ body{
   color: black;
   margin-top: -5px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire{
+.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire {
   float: right;
 }
 .bloc-plan-site .menu-block-wrapper > ul > li > ul > li > a {
@@ -262,9 +339,9 @@ body{
   margin-bottom: 10px;
   display: inline-block;
   background: url('../images/icon/fleche-bleu.png') center left no-repeat;
-  color:#153d8a;
+  color: #153d8a;
 }
-.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > a:hover{
+.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > a:hover {
   color: #00a2e0;
   text-decoration: none;
 }
@@ -272,53 +349,94 @@ body{
   margin-right: 20px;
 }
 
-.bloc-plan-site > div > ul > li:nth-child(2n+1) {
+.bloc-plan-site > div > ul > li:nth-child(2n + 1) {
   clear: left;
 }
-.bloc-plan-site > div > ul >li.menu__item > ul.menu {
+.bloc-plan-site > div > ul > li.menu__item > ul.menu {
   padding: 15px 0 30px 30px;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu .menu .menu{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  .menu
+  .menu {
   width: 560px;
   padding: 10px 0 0 0;
 }
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li .menu li{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  .menu
+  li {
   margin-left: 28px;
   width: 393px;
 }
 .pane-menu-main-sidebar .menu li .menu li a,
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li .menu li a,
-.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > ul > li > a{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  .menu
+  li
+  a,
+.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > ul > li > a {
   font-size: 18px;
   padding: 0px 0 8px 10px;
   display: inline-block;
-  background: url('../images/styles/pictos_arrow_light.png') center left no-repeat;
+  background: url('../images/styles/pictos_arrow_light.png') center left
+    no-repeat;
   background-position-y: 9px;
 }
 
-.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > ul > li > ul a{
+.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > ul > li > ul a {
   font-size: 0.9em;
 }
 
 .pane-menu-main-sidebar .menu li .menu li a,
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li .menu li a{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  .menu
+  li
+  a {
   height: 31px;
   margin: 2px 0 0 0;
   font-weight: normal;
 }
 .pane-menu-main-sidebar .menu li .menu li a:hover,
-.panels-flexible-region-62-center-inside .pane-menu-menu-secondaire .menu-block-wrapper .menu li .menu li .menu li a:hover,
-.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > ul > li > a:hover{
+.panels-flexible-region-62-center-inside
+  .pane-menu-menu-secondaire
+  .menu-block-wrapper
+  .menu
+  li
+  .menu
+  li
+  .menu
+  li
+  a:hover,
+.bloc-plan-site .menu-block-wrapper > ul > li > ul > li > ul > li > a:hover {
   color: #00a2e0;
   font-weight: 600;
   text-decoration: none;
   background-position-y: 9px;
 }
-.pane-menu-main-sidebar .menu li .menu li{
+.pane-menu-main-sidebar .menu li .menu li {
   background: none;
 }
 .pane-node-field-media-rattache .media-dailymotion-outer-wrapper,
-.pane-node-field-media-rattache iframe{
+.pane-node-field-media-rattache iframe {
   /*height: 500px!important;*/
 }
 .media-youtube-video {
@@ -334,238 +452,275 @@ body{
   width: 100%;
   height: 100%;
 }
-.node-type-formulaire-webform .webform-container-inline.webform-component-textarea .form-textarea-wrapper{
+.node-type-formulaire-webform
+  .webform-container-inline.webform-component-textarea
+  .form-textarea-wrapper {
   display: block;
 }
-.page-node .node-contact .postalCode{
+.page-node .node-contact .postalCode {
   width: 55px;
   float: left;
   display: inline-block;
 }
-.page-node .node-contact .addressLocality{
+.page-node .node-contact .addressLocality {
   float: left;
   display: inline-block;
   margin-bottom: 20px;
   min-width: 150px;
 }
-.page-node .node-contact .site{
+.page-node .node-contact .site {
   display: inline-block;
   margin-bottom: 20px;
 }
-#accessible-nav a{
+#accessible-nav a {
   margin-right: 10px;
 }
-.panel-col-top .pane-aphp-global-main-menu nav > ul > li > .sub-menu > .menu > li{
+.panel-col-top
+  .pane-aphp-global-main-menu
+  nav
+  > ul
+  > li
+  > .sub-menu
+  > .menu
+  > li {
   margin-bottom: 12px;
 }
 .node-type-article .field-name-body .field-name-field-credits .field-label,
-.node-type-article .field-name-body .field-name-field-description-media{
+.node-type-article .field-name-body .field-name-field-description-media {
   display: none;
 }
-.node-type-article .field-name-body .field-name-field-credits .field-items{
+.node-type-article .field-name-body .field-name-field-credits .field-items {
   margin-top: -8px;
   margin-bottom: 10px;
 }
-.node-type-hopital .panels-flexible-region-inside-first .field-name-field-liens-utiles .node-title a{
+.node-type-hopital
+  .panels-flexible-region-inside-first
+  .field-name-field-liens-utiles
+  .node-title
+  a {
   font-weight: 600;
 }
-.node-type-hopital .panels-flexible-region-inside-first .pane-node-field-liens-utiles{
+.node-type-hopital
+  .panels-flexible-region-inside-first
+  .pane-node-field-liens-utiles {
   padding: 20px 0;
 }
-.node-type-hopital .pane-aphp-hospital-panel-pane-hopitaux-du-groupe .views-row{
+.node-type-hopital
+  .pane-aphp-hospital-panel-pane-hopitaux-du-groupe
+  .views-row {
   border: none;
   padding: 0;
 }
-.custom-node-right .views-row .views-field-title a{
-  background: url("../images/icon/fleche-bleu.png") 0px 4px no-repeat;
+.custom-node-right .views-row .views-field-title a {
+  background: url('../images/icon/fleche-bleu.png') 0px 4px no-repeat;
   padding-left: 30px;
   display: block;
-
 }
-.node-type-hopital .pane-aphp-hospital-panel-pane-hopitaux-du-groupe .views-row .views-field-title{
+.node-type-hopital
+  .pane-aphp-hospital-panel-pane-hopitaux-du-groupe
+  .views-row
+  .views-field-title {
   display: block;
   padding: 5px 0 5px 0px;
   position: relative;
 }
-.node-type-ressource-presse .panel-flexible-inside .panels-flexible-region-first{
+.node-type-ressource-presse
+  .panel-flexible-inside
+  .panels-flexible-region-first {
   padding-bottom: 25px;
 }
 
-.aphp-dans-les-medias .view-ressources-presse .views-row .views-field-title{
+.aphp-dans-les-medias .view-ressources-presse .views-row .views-field-title {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: bold;
 }
 .extrait-media .pane-page-content .pane-node-field-date,
-.aphp-dans-les-medias .view-ressources-presse .views-row .views-field-field-date{
+.aphp-dans-les-medias
+  .view-ressources-presse
+  .views-row
+  .views-field-field-date {
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 10px;
   font-style: italic;
 }
-.extrait-media .pane-page-content .pane-node-field-date{
+.extrait-media .pane-page-content .pane-node-field-date {
   height: 20px;
   margin-bottom: 15px;
   padding-right: 14px;
   border-right: 2px solid black;
-  position: relative; top: -80px;
+  position: relative;
+  top: -80px;
   float: left;
 }
-.aphp-dans-les-medias .view-ressources-presse .views-row .views-field-field-nom-du-support{
+.aphp-dans-les-medias
+  .view-ressources-presse
+  .views-row
+  .views-field-field-nom-du-support {
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 3px;
 }
-.aphp-dans-les-medias .attachment-before .view-ressources-presse .views-row .views-field-field-nom-du-support{
+.aphp-dans-les-medias
+  .attachment-before
+  .view-ressources-presse
+  .views-row
+  .views-field-field-nom-du-support {
   padding-top: 15px;
 }
-.aphp-dans-les-medias .view-mode-contenus_rattaches .node-title{
+.aphp-dans-les-medias .view-mode-contenus_rattaches .node-title {
   display: none;
 }
-.aphp-dans-les-medias .view-ressources-presse .views-field-field-media-rattache{
+.aphp-dans-les-medias
+  .view-ressources-presse
+  .views-field-field-media-rattache {
   float: left;
   padding-right: 25px;
 }
 .extrait-media .view-mode-contenus_rattaches .node-title,
-.pane-aphp-hospital-panel-pane-hospital-map-list #edit-sort-by{
+.pane-aphp-hospital-panel-pane-hospital-map-list #edit-sort-by {
   display: none;
 }
-.extrait-media .pane-page-content .pane-node-field-nom-du-support{
+.extrait-media .pane-page-content .pane-node-field-nom-du-support {
   width: calc(100% - 180px);
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  position: relative; top: -78px;
+  position: relative;
+  top: -78px;
   margin-bottom: 10px;
   padding-left: 14px;
   float: left;
 }
-.extrait-media .pane-page-content .pane-node-field-media-rattache{
-  position: relative; top: -65px;
+.extrait-media .pane-page-content .pane-node-field-media-rattache {
+  position: relative;
+  top: -65px;
 }
-.extrait-media .pane-page-content .pane-node-body{
-  position: relative; top: -97px;
+.extrait-media .pane-page-content .pane-node-body {
+  position: relative;
+  top: -97px;
   background: #ffffff;
   padding: 25px 30px;
 }
-.extrait-media .panel-flexible-inside .panels-flexible-region-first{
+.extrait-media .panel-flexible-inside .panels-flexible-region-first {
   width: 895px;
   margin-bottom: 78px;
   padding: 30px 0;
   float: left;
   background: none;
 }
-.pane-aphp-hospital-panel-pane-hospital-map-list .form-item-sort-by label{
+.pane-aphp-hospital-panel-pane-hospital-map-list .form-item-sort-by label {
   margin-right: -11px;
 }
-.pane-aphp-hospital-panel-pane-hospital-map-list .form-item-sort-order label{
+.pane-aphp-hospital-panel-pane-hospital-map-list .form-item-sort-order label {
   margin-right: 2px;
-  text-transform :lowercase;
+  text-transform: lowercase;
 }
-#page-tools{
+#page-tools {
   float: right;
   text-align: center;
 }
 #page-tools .print-content-tool,
 #page-tools .send-content-tool,
-#page-tools .share-content-tool{
+#page-tools .share-content-tool {
   float: left;
 }
-#page-tools .social-networks-share .fb{
+#page-tools .social-networks-share .fb {
   float: left;
 }
-#page-tools .social-networks-share .tw{
+#page-tools .social-networks-share .tw {
   float: left;
-
 }
-#page-tools .social-networks-share .in{
+#page-tools .social-networks-share .in {
   float: left;
 }
 #page-tools .send-content-tool,
 #page-tools .social-networks-share .tw,
-#page-tools .social-networks-share .in
-{
+#page-tools .social-networks-share .in {
   margin-left: 33px;
   margin-left: 1.941em;
 }
-#page-tools .social-networks-share .fb{
+#page-tools .social-networks-share .fb {
   margin-left: 37px;
   margin-left: 2.176em;
 }
-#page-tools .social-networks-share .in{
+#page-tools .social-networks-share .in {
   margin-right: 16px;
   margin-right: 0.941em;
 }
 #webform-client-form-1782 #edit-submitted-contenu-a-signaler,
 #webform-client-form-1782 .webform-component--url-a-signaler,
 #webform-client-form-1783 #edit-submitted-contenu-a-envoyer,
-#webform-client-form-1783 .webform-component--url-a-envoyer{
+#webform-client-form-1783 .webform-component--url-a-envoyer {
   display: none;
 }
 
-.webform-client-form .form-item.webform-component > label{
+.webform-client-form .form-item.webform-component > label {
   float: left !important;
 }
-.webform-client-form-1782  .content-title,
-.webform-client-form-1783  .content-title{
+.webform-client-form-1782 .content-title,
+.webform-client-form-1783 .content-title {
   margin-bottom: 33px;
   padding-top: 0.5em;
 }
-.page-espace-presse .statistics_counter{
+.page-espace-presse .statistics_counter {
   display: none;
 }
-.pane-node-field-media-rattache .field-name-field-image{
+.pane-node-field-media-rattache .field-name-field-image {
   margin: 0 0px 0px;
 }
-.credits_titre{
-  margin-right:0.2em;
+.credits_titre {
+  margin-right: 0.2em;
   margin-left: 0px;
   font-weight: 600;
 }
 
-.pane-node-field-media-rattache .field-name-field-credits .field-item{
+.pane-node-field-media-rattache .field-name-field-credits .field-item {
   font-size: 0.79em;
   color: #808080;
 }
 .view-mode-diaporama .field-name-field-credits .field-item::before,
-.pane-node-field-media-rattache .field-name-field-credits .field-item::before{
-  content:"\00A9";
-  display:inline;
-  font-style:italic;
-  margin-right:2px;
+.pane-node-field-media-rattache .field-name-field-credits .field-item::before {
+  content: '\00A9';
+  display: inline;
+  font-style: italic;
+  margin-right: 2px;
 }
-.panel-2col-stacked .panel-col-top .header-title .view-urbact-themes ul li{
-  display:inline-block; margin-right: 20px;
+.panel-2col-stacked .panel-col-top .header-title .view-urbact-themes ul li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-.view-aphp-document .views-slideshow-cycle-main-frame-row{
-  width:100%!important;
+.view-aphp-document .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
 }
-.field-name-body h2{
+.field-name-body h2 {
   color: #00a2e0;
   font-size: 22px;
   font-size: 1.294em;
   font-family: 'MontserratBold', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
-h3.encart, .field-name-body h3{
+h3.encart,
+.field-name-body h3 {
   font-size: 20px;
   font-size: 1.176em;
 }
-.page-demarches .view-demarches .views-row .views-field-body div.encart a{
-  color:#ffffff;
+.page-demarches .view-demarches .views-row .views-field-body div.encart a {
+  color: #ffffff;
 }
 
 /***** Lien utile *****/
-.lien-utile .pane-node-field-categorie{
+.lien-utile .pane-node-field-categorie {
   display: inline-block;
 }
 .lien-utile .pane-node-field-thematique .field-item,
-.lien-utile .pane-node-field-categorie .field-item{
+.lien-utile .pane-node-field-categorie .field-item {
   width: auto;
   display: inline-block;
   font-size: 12px;
@@ -576,15 +731,15 @@ h3.encart, .field-name-body h3{
   text-transform: uppercase;
   border-right: 2px solid #000000;
 }
-.lien-utile .pane-node-field-categorie .field-item{
+.lien-utile .pane-node-field-categorie .field-item {
   border-right: none;
   padding-right: 0;
 }
-.lien-utile .pane-node-field-thematique{
+.lien-utile .pane-node-field-thematique {
   margin-top: 35px;
   display: inline-block;
 }
-.lien-utile .pane-node-field-url{
+.lien-utile .pane-node-field-url {
   margin-top: 20px;
   font-size: 16px;
   font-size: 1.6rem;
@@ -593,7 +748,7 @@ h3.encart, .field-name-body h3{
   background: white;
   padding: 30px 30px 0 30px;
 }
-.lien-utile .pane-node-field-descriptif{
+.lien-utile .pane-node-field-descriptif {
   background: white;
   padding: 20px 30px 20px 30px;
   padding-top: 20px;
@@ -617,71 +772,81 @@ h3.encart, .field-name-body h3{
   margin-left: 1em;
 }
 
-.aphp-dans-les-medias .view-ressources-presse .views-row .views-field-field-visuel{
+.aphp-dans-les-medias
+  .view-ressources-presse
+  .views-row
+  .views-field-field-visuel {
   width: 250px;
   height: 141px;
   overflow: hidden;
 }
-.aphp-dans-les-medias .view-ressources-presse.view-display-id-panel_pane_aphp_medias{
+.aphp-dans-les-medias
+  .view-ressources-presse.view-display-id-panel_pane_aphp_medias {
   margin-bottom: 78px;
 }
-.aphp-dans-les-medias .view-ressources-presse .views-row{
+.aphp-dans-les-medias .view-ressources-presse .views-row {
   margin: 0 -30px 0;
   padding: 14px 30px 20px;
   border-bottom: #ececec solid 4px;
 }
-.aphp-dans-les-medias .view-ressources-presse ul.pager{
+.aphp-dans-les-medias .view-ressources-presse ul.pager {
   margin-top: 25px;
   margin-bottom: 0;
 }
-.aphp-dans-les-medias .view-ressources-presse .view-header p{
+.aphp-dans-les-medias .view-ressources-presse .view-header p {
   font-size: 20px;
   font-size: 2rem;
   font-weight: 600;
 }
 
-.aphp-dans-les-medias .view-ressources-presse .first-pager{
+.aphp-dans-les-medias .view-ressources-presse .first-pager {
   overflow: hidden;
   background-color: white;
   border-bottom: 0.25em solid #ececec;
 }
-.aphp-dans-les-medias .view-ressources-presse .attachment-before{
+.aphp-dans-les-medias .view-ressources-presse .attachment-before {
   width: 100%;
   float: left;
   background: #fff;
   padding: 25px 30px 0 30px;
 }
-.aphp-dans-les-medias .view-ressources-presse.view-display-id-panel_pane_aphp_medias > .view-content{
+.aphp-dans-les-medias
+  .view-ressources-presse.view-display-id-panel_pane_aphp_medias
+  > .view-content {
   width: 100%;
   float: left;
   background: #fff;
   padding: 0px 30px;
 }
-.aphp-dans-les-medias .view-ressources-presse .item-list{
+.aphp-dans-les-medias .view-ressources-presse .item-list {
   width: 100%;
   float: left;
   background: #fff;
   padding: 0 30px 25px 30px;
 }
-.aphp-dans-les-medias .view-ressources-presse .first-pager .item-list{
+.aphp-dans-les-medias .view-ressources-presse .first-pager .item-list {
   background: none;
   padding-bottom: 17px;
 }
-.aphp-dans-les-medias .view-ressources-presse .view-footer{
+.aphp-dans-les-medias .view-ressources-presse .view-footer {
   width: 100%;
   float: left;
   background: #fff;
   padding: 20px 30px;
 }
 .aphp-dans-les-medias .views-exposed-form .views-exposed-widget .form-text,
-.aphp-dans-les-medias .views-exposed-form .views-exposed-widget select{
+.aphp-dans-les-medias .views-exposed-form .views-exposed-widget select {
   width: 300px;
 }
-.aphp-dans-les-medias .view-ressources-presse .views-widget-filter-field_type_de_support_tid
-.aphp-dans-les-medias .view-ressources-presse .views-submit-button{
+.aphp-dans-les-medias
+  .view-ressources-presse
+  .views-widget-filter-field_type_de_support_tid
+  .aphp-dans-les-medias
+  .view-ressources-presse
+  .views-submit-button {
   margin-left: 20px;
 }
-.aphp-dans-les-medias .pane-aphp-page-tools{
+.aphp-dans-les-medias .pane-aphp-page-tools {
   top: 365px;
 }
 
@@ -692,15 +857,16 @@ h3.encart, .field-name-body h3{
 
 /***** SECTIONS *****/
 .votre-sortie .pane-page-title,
-.votre-sejour .pane-page-title{
+.votre-sejour .pane-page-title {
   padding-bottom: 40px;
 }
 .votre-sejour .pane-aphp-search-section-form,
 .votre-sortie .pane-aphp-search-section-form,
 .votre-sante .pane-aphp-search-section-form,
 .page-patient .pane-aphp-search-section-form,
-.page-professionnel .pane-aphp-search-section-pro-form{
-  height: 262px; width: 48.3606%;
+.page-professionnel .pane-aphp-search-section-pro-form {
+  height: 262px;
+  width: 48.3606%;
   padding: 35px 20px 35px 15px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -712,7 +878,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .view-mode-1col,
 .votre-sante .view-mode-1col,
 .page-patient .view-mode-1col,
-.page-professionnel .view-mode-1col{
+.page-professionnel .view-mode-1col {
   width: 23.3606%;
   margin-right: 20px;
   float: left;
@@ -721,7 +887,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .view-mode-2col,
 .votre-sante .view-mode-2col,
 .page-patient .view-mode-2col,
-.page-professionnel .view-mode-2col{
+.page-professionnel .view-mode-2col {
   width: 48.3606%;
   margin-right: 20px;
   float: left;
@@ -735,31 +901,35 @@ h3.encart, .field-name-body h3{
 .page-patient .pane-aphp-search-section-form .pane-title,
 .page-professionnel .pane-aphp-search-section-pro-form .pane-title,
 .page-patient .pane-aphp-search-section-form a,
-.page-professionnel .pane-aphp-search-section-pro-form .titre-general{
+.page-professionnel .pane-aphp-search-section-pro-form .titre-general {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: none;
 }
 .votre-sejour .infos-pratiques p a:before,
-.page-professionnel .pane-aphp-search-section-pro-form a:before{
+.page-professionnel .pane-aphp-search-section-pro-form a:before {
   content: '';
   float: left;
-  height: 11px; width: 6px;
-  position: relative; top: 5px; right: 8px;
-  background: url("../images/fleche-rouge.png") center center no-repeat;
+  height: 11px;
+  width: 6px;
+  position: relative;
+  top: 5px;
+  right: 8px;
+  background: url('../images/fleche-rouge.png') center center no-repeat;
 }
-.votre-sejour .infos-pratiques p a:before{
-  top: 10px; right: 0;
+.votre-sejour .infos-pratiques p a:before {
+  top: 10px;
+  right: 0;
 }
-.votre-sejour .infos-pratiques p a{
+.votre-sejour .infos-pratiques p a {
   padding-left: 10px;
 }
 .votre-sejour .pane-aphp-search-section-form .pane-title,
 .votre-sortie .pane-aphp-search-section-form .pane-title,
 .votre-sante .pane-aphp-search-section-form .pane-title,
 .page-patient .pane-aphp-search-section-form .pane-title,
-.page-professionnel .pane-aphp-search-section-pro-form .pane-title{
+.page-professionnel .pane-aphp-search-section-pro-form .pane-title {
   margin-left: 12px;
 }
 .votre-sejour .pane-aphp-search-section-form a,
@@ -767,16 +937,16 @@ h3.encart, .field-name-body h3{
 .votre-sante .pane-aphp-search-section-form a,
 .page-patient .pane-aphp-search-section-form a,
 .page-professionnel .pane-aphp-search-section-pro-form a,
-.page-professionnel .pane-aphp-search-section-pro-form .titre-general{
+.page-professionnel .pane-aphp-search-section-pro-form .titre-general {
   display: block;
   padding-left: 37px;
   position: relative;
 }
-.page-professionnel .pane-aphp-search-section-pro-form .titre-general{
+.page-professionnel .pane-aphp-search-section-pro-form .titre-general {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-.page-professionnel .pane-aphp-search-section-pro-form a{
+.page-professionnel .pane-aphp-search-section-pro-form a {
   width: 190px;
   font-size: 13px;
   font-size: 1.3rem;
@@ -788,21 +958,24 @@ h3.encart, .field-name-body h3{
 .votre-sortie .pane-aphp-search-section-form #aphp-search-section-pro-form,
 .votre-sante .pane-aphp-search-section-form #aphp-search-section-pro-form,
 .page-patient .pane-aphp-search-section-form #aphp-search-section-pro-form,
-.page-professionnel .pane-aphp-search-section-pro-form #aphp-search-section-pro-form{
+.page-professionnel
+  .pane-aphp-search-section-pro-form
+  #aphp-search-section-pro-form {
   position: relative;
 }
-.page-professionnel .pane-aphp-search-section-pro-form #aphp-search-block-form{
+.page-professionnel .pane-aphp-search-section-pro-form #aphp-search-block-form {
   margin-top: -5px;
 }
 .votre-sejour #edit-submitted-nom-de-votre-hopital,
 .votre-sortie .pane-aphp-search-section-form #edit-keywords,
 .votre-sante .pane-aphp-search-section-form #edit-keywords,
 .page-patient .pane-aphp-search-section-form #edit-keywords,
-.page-professionnel .pane-aphp-search-section-pro-form #edit-keywords{
-  height: 60px; width: 88%;
+.page-professionnel .pane-aphp-search-section-pro-form #edit-keywords {
+  height: 60px;
+  width: 88%;
   padding: 13px 89px 13px 22px;
   background: #fff;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
   font-size: 20px;
   font-size: 2rem;
@@ -815,16 +988,20 @@ h3.encart, .field-name-body h3{
 .votre-sortie .pane-aphp-search-section-form #edit-submit,
 .votre-sante .pane-aphp-search-section-form #edit-submit,
 .page-patient .pane-aphp-search-section-form #edit-submit,
-.page-professionnel .pane-aphp-search-section-pro-form #edit-submit{
-  height: 60px; width: 68px;
-  position: absolute; top: 0; right: 0px;
+.page-professionnel .pane-aphp-search-section-pro-form #edit-submit {
+  height: 60px;
+  width: 68px;
+  position: absolute;
+  top: 0;
+  right: 0px;
   line-height: 60px;
   text-align: left;
   text-indent: -999em;
   overflow: hidden;
-  background: #c32e3c url("../images/rechercher-white.png") center center no-repeat;
+  background: #c32e3c url('../images/rechercher-white.png') center center
+    no-repeat;
 }
-.votre-sortie .preparer-sortie a.link{
+.votre-sortie .preparer-sortie a.link {
   display: block;
   position: relative;
   padding-left: 37px;
@@ -834,10 +1011,11 @@ h3.encart, .field-name-body h3{
   font-weight: 600;
   text-transform: none;
 }
-.votre-sortie .preparer-sortie .informations-sortie{
+.votre-sortie .preparer-sortie .informations-sortie {
   width: 100%;
   border-top: 1px solid #dddada;
-  position: absolute; bottom: 0px;
+  position: absolute;
+  bottom: 0px;
   padding: 20px 25px 20px 30px;
   margin-left: -30px;
   float: left;
@@ -846,10 +1024,13 @@ h3.encart, .field-name-body h3{
 .votre-sortie .preparer-sortie a.link:before,
 .votre-sante .pane-aphp-search-section-form a:before,
 .page-patient .pane-aphp-search-section-form a:before,
-.page-professionnel .pane-aphp-search-section-pro-form .titre-general:before{
+.page-professionnel .pane-aphp-search-section-pro-form .titre-general:before {
   content: '';
-  height: 2px; width: 6px;
-  position: absolute; top: 50%; left: 0px;
+  height: 2px;
+  width: 6px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
   background: #000;
   margin-top: -1px;
 }
@@ -857,10 +1038,13 @@ h3.encart, .field-name-body h3{
 .votre-sortie .preparer-sortie a.link:after,
 .votre-sante .pane-aphp-search-section-form a:after,
 .page-patient .pane-aphp-search-section-form a:after,
-.page-professionnel .pane-aphp-search-section-pro-form .titre-general:after{
+.page-professionnel .pane-aphp-search-section-pro-form .titre-general:after {
   content: '';
-  height: 0; width: 0;
-  position: absolute; top: 50%; left: 6px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 6px;
   border: 9px solid transparent;
   border-right-width: 0;
   border-left-color: #000;
@@ -870,7 +1054,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .view-mode-1col .image .titre,
 .votre-sante .view-mode-1col .image .titre,
 .page-patient .view-mode-1col .image .titre,
-.page-professionnel .view-mode-1col .image .titre{
+.page-professionnel .view-mode-1col .image .titre {
   bottom: 1px;
   padding: 12px 27px 13px 27px;
 }
@@ -878,7 +1062,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .node-bloc-auto-promotion .special-link .titre,
 .votre-sante .node-bloc-auto-promotion .special-link .titre,
 .page-patient .node-bloc-auto-promotion .special-link .titre,
-.page-professionnel .node-bloc-auto-promotion .special-link .titre{
+.page-professionnel .node-bloc-auto-promotion .special-link .titre {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -896,7 +1080,7 @@ h3.encart, .field-name-body h3{
 }
 .votre .view-mode-2col .image .titre,
 .page-patient .view-mode-2col .image .titre,
-.page-professionnel .view-mode-2col .image .titre{
+.page-professionnel .view-mode-2col .image .titre {
   padding: 12px 27px 13px 27px;
 }
 .votre-sejour .view-mode-1col .image .picture,
@@ -908,7 +1092,7 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .image .picture,
 .page-patient .view-mode-2col .image .picture,
 .page-professionnel .view-mode-1col .image .picture,
-.page-professionnel .view-mode-2col .image .picture{
+.page-professionnel .view-mode-2col .image .picture {
   height: 262px;
   overflow: hidden;
 }
@@ -916,7 +1100,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .view-mode-1col .image .picture,
 .votre-sante .view-mode-1col .image .picture,
 .page-patient .view-mode-1col .image .picture,
-.page-professionnel .view-mode-1col .image .picture{
+.page-professionnel .view-mode-1col .image .picture {
   height: 262px;
   margin-bottom: 20px;
 }
@@ -929,8 +1113,9 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .liste,
 .page-patient .view-mode-2col .liste,
 .page-professionnel .view-mode-1col .liste,
-.page-professionnel .view-mode-2col .liste{
-  height: 262px; width: 100%;
+.page-professionnel .view-mode-2col .liste {
+  height: 262px;
+  width: 100%;
   background: #9fd1e0;
   font-weight: 600;
 }
@@ -943,7 +1128,7 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .liste.col-un,
 .page-patient .view-mode-2col .liste.col-deux,
 .page-professionnel .view-mode-1col .liste.col-un,
-.page-professionnel .view-mode-2col .liste.col-deux{
+.page-professionnel .view-mode-2col .liste.col-deux {
   width: calc(100% + 40px);
   margin: -23px 0 0 -20px;
   padding: 23px 20px;
@@ -957,7 +1142,7 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .texte-col-un,
 .page-patient .view-mode-2col .texte-col-deux,
 .page-professionnel .view-mode-1col .texte-col-un,
-.page-professionnel .view-mode-2col .texte-col-deux{
+.page-professionnel .view-mode-2col .texte-col-deux {
   height: 262px;
   display: block;
   margin: -23px -20px -3px -20px;
@@ -975,7 +1160,7 @@ h3.encart, .field-name-body h3{
 .page-professionnel .view-mode-1col .liste.col-un,
 .page-professionnel .view-mode-2col .liste.col-deux,
 .page-professionnel .view-mode-1col .texte-col-un,
-.page-professionnel .view-mode-2col .texte-col-deux{
+.page-professionnel .view-mode-2col .texte-col-deux {
   margin-bottom: -3px;
 }
 .votre-sejour .view-mode-1col .texte-col-un:hover,
@@ -987,7 +1172,7 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .texte-col-un:hover,
 .page-patient .view-mode-2col .texte-col-deux:hover,
 .page-professionnel .view-mode-1col .texte-col-un:hover,
-.page-professionnel .view-mode-2col .texte-col-deux:hover{
+.page-professionnel .view-mode-2col .texte-col-deux:hover {
   background-color: #b8dee9;
 }
 .votre-sejour .view-mode-1col .texte-col-un a,
@@ -999,8 +1184,9 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .texte-col-un a,
 .page-patient .view-mode-2col .texte-col-deux a,
 .page-professionnel .view-mode-1col .texte-col-un a,
-.page-professionnel .view-mode-2col .texte-col-deux a{
-  height: 100%; width: 100%;
+.page-professionnel .view-mode-2col .texte-col-deux a {
+  height: 100%;
+  width: 100%;
   display: block;
 }
 .votre-sejour .view-mode-1col .texte-col-un a:hover,
@@ -1012,22 +1198,23 @@ h3.encart, .field-name-body h3{
 .page-patient .view-mode-1col .texte-col-un a:hover,
 .page-patient .view-mode-2col .texte-col-deux a:hover,
 .page-professionnel .view-mode-1col .texte-col-un a:hover,
-.page-professionnel .view-mode-2col .texte-col-deux a:hover{
+.page-professionnel .view-mode-2col .texte-col-deux a:hover {
   text-decoration: none;
 }
 .votre-sejour .pane-page-content .panel-1col,
 .votre-sortie .pane-page-content .panel-1col,
 .votre-sante .pane-page-content .panel-1col,
 .page-patient .pane-page-content .panel-1col,
-.page-professionnel .pane-page-content .panel-1col{
+.page-professionnel .pane-page-content .panel-1col {
   margin-bottom: 85px;
 }
 .votre-sejour .pane-aphp-actualite-panel-pane-page-pro-actus,
 .votre-sortie .pane-aphp-actualite-panel-pane-page-pro-actus,
 .votre-sante .pane-aphp-actualite-panel-pane-page-pro-actus,
 .page-patient .pane-aphp-actualite-panel-pane-page-pro-actus,
-.page-professionnel .pane-aphp-actualite-panel-pane-page-pro-actus{
-  height: 544px; width: 48.3606%;
+.page-professionnel .pane-aphp-actualite-panel-pane-page-pro-actus {
+  height: 544px;
+  width: 48.3606%;
   margin-right: 20px;
   margin-bottom: 20px;
   float: left;
@@ -1037,22 +1224,60 @@ h3.encart, .field-name-body h3{
 .votre-sortie .pane-aphp-actualite-panel-pane-page-pro-actus h3.node-title,
 .votre-sante .pane-aphp-actualite-panel-pane-page-pro-actus h3.node-title,
 .page-patient .pane-aphp-actualite-panel-pane-page-pro-actus h3.node-title,
-.page-professionnel .pane-aphp-actualite-panel-pane-page-pro-actus h3.node-title{
+.page-professionnel
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  h3.node-title {
   display: none;
 }
-.votre-sejour .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item,
-.votre-sortie .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item,
-.votre-sante .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item,
-.page-patient .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item,
-.page-professionnel .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item{
-  height: 262px; width: 590px;
+.votre-sejour
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item,
+.votre-sortie
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item,
+.votre-sante
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item,
+.page-patient
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item,
+.page-professionnel
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item {
+  height: 262px;
+  width: 590px;
   overflow: hidden;
 }
-.votre-sejour .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item img,
-.votre-sortie .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item img,
-.votre-sante .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item img,
-.page-patient .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item img,
-.page-professionnel .pane-aphp-actualite-panel-pane-page-pro-actus .field-name-field-image .field-item img{
+.votre-sejour
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item
+  img,
+.votre-sortie
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item
+  img,
+.votre-sante
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item
+  img,
+.page-patient
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item
+  img,
+.page-professionnel
+  .pane-aphp-actualite-panel-pane-page-pro-actus
+  .field-name-field-image
+  .field-item
+  img {
   max-width: none;
   width: 590px;
 }
@@ -1060,20 +1285,20 @@ h3.encart, .field-name-body h3{
 .votre-sortie .views_slideshow_slide .views-field-field-media-rattache,
 .votre-sante .views_slideshow_slide .views-field-field-media-rattache,
 .page-patient .views_slideshow_slide .views-field-field-media-rattache,
-.page-professionnel .views_slideshow_slide .views-field-field-media-rattache{
+.page-professionnel .views_slideshow_slide .views-field-field-media-rattache {
   width: 590px;
 }
 .votre-sejour .views_slideshow_slide .views-field-type,
 .votre-sortie .views_slideshow_slide .views-field-type,
 .votre-sante .views_slideshow_slide .views-field-type,
 .page-patient .views_slideshow_slide .views-field-type,
-.page-professionnel .views_slideshow_slide .views-field-type{
+.page-professionnel .views_slideshow_slide .views-field-type {
   width: 590px;
   margin-left: 0;
   background: #ffffff;
   padding: 25px 25px 0 25px;
   float: left;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   font-size: 1.6rem;
   font-style: italic;
@@ -1083,13 +1308,13 @@ h3.encart, .field-name-body h3{
 .votre-sortie .views_slideshow_slide .views-field-created,
 .votre-sante .views_slideshow_slide .views-field-created,
 .page-patient .views_slideshow_slide .views-field-created,
-.page-professionnel .views_slideshow_slide .views-field-created{
+.page-professionnel .views_slideshow_slide .views-field-created {
   width: 590px;
   float: left;
   font-size: 15px;
   font-size: 1.5rem;
   font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-transform: lowercase;
   background: #ffffff;
   padding: 0px 25px 0 25px;
@@ -1101,7 +1326,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .views_slideshow_slide .views-field-title,
 .votre-sante .views_slideshow_slide .views-field-title,
 .page-patient .views_slideshow_slide .views-field-title,
-.page-professionnel .views_slideshow_slide .views-field-title{
+.page-professionnel .views_slideshow_slide .views-field-title {
   width: 590px;
   float: left;
   font-size: 16px;
@@ -1121,14 +1346,14 @@ h3.encart, .field-name-body h3{
 .page-patient .views_slideshow_slide .views-field-title a:hover,
 .page-professionnel .views_slideshow_slide .views-field-title a:hover,
 .page-patient .views_slideshow_slide .views-field-view-node a:hover,
-.page-professionnel .views_slideshow_slide .views-field-view-node a:hover{
+.page-professionnel .views_slideshow_slide .views-field-view-node a:hover {
   text-decoration: none;
 }
 .votre-sejour .views_slideshow_slide .views-field-field-chapo,
 .votre-sortie .views_slideshow_slide .views-field-field-chapo,
 .votre-sante .views_slideshow_slide .views-field-field-chapo,
 .page-patient .views_slideshow_slide .views-field-field-chapo,
-.page-professionnel .views_slideshow_slide .views-field-field-chapo{
+.page-professionnel .views_slideshow_slide .views-field-field-chapo {
   width: 590px;
   float: left;
   font-size: 15px;
@@ -1142,7 +1367,7 @@ h3.encart, .field-name-body h3{
 .votre-sortie .views_slideshow_slide .views-field-view-node,
 .votre-sante .views_slideshow_slide .views-field-view-node,
 .page-patient .views_slideshow_slide .views-field-view-node,
-.page-professionnel .views_slideshow_slide .views-field-view-node{
+.page-professionnel .views_slideshow_slide .views-field-view-node {
   width: 20px;
   font-size: 35px;
   font-size: 3.5rem;
@@ -1161,14 +1386,14 @@ h3.encart, .field-name-body h3{
 .votre-sortie .view-id-aphp_actualite .widget_pager,
 .votre-sante .view-id-aphp_actualite .widget_pager,
 .page-patient .view-id-aphp_actualite .widget_pager,
-.page-professionnel .view-id-aphp_actualite .widget_pager{
+.page-professionnel .view-id-aphp_actualite .widget_pager {
   position: absolute;
   top: 287px;
   right: 25px;
   z-index: 20;
   text-align: right;
 }
-.node-bloc-auto-promotion .special-link{
+.node-bloc-auto-promotion .special-link {
   display: block;
   margin: -23px -20px;
   position: relative;
@@ -1178,14 +1403,15 @@ h3.encart, .field-name-body h3{
 .votre-sortie.not-front .center-wrapper,
 .votre-sante.not-front .center-wrapper,
 .page-patient.not-front .center-wrapper,
-.page-professionnel.not-front .center-wrapper{
+.page-professionnel.not-front .center-wrapper {
   width: 1220px;
 }
 .votre-sejour .node-formulaire-webform,
 .votre-sejour .qui-contacter,
 .votre-sejour .infos-pratiques,
-.votre-sortie .preparer-sortie{
-  height: 544px; width: 48.3606%;
+.votre-sortie .preparer-sortie {
+  height: 544px;
+  width: 48.3606%;
   padding: 25px 25px 35px 30px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -1194,16 +1420,16 @@ h3.encart, .field-name-body h3{
   float: left;
 }
 .votre-sejour .node-formulaire-webform,
-.votre-sejour .infos-pratiques{
+.votre-sejour .infos-pratiques {
   height: 262px;
 }
-.votre-sejour .infos-pratiques p{
+.votre-sejour .infos-pratiques p {
   margin: 0;
 }
 .votre-sejour .node-formulaire-webform .field-name-body,
 .votre-sejour .qui-contacter h2,
 .votre-sejour .infos-pratiques h2,
-.votre-sortie .preparer-sortie h2{
+.votre-sortie .preparer-sortie h2 {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 600;
@@ -1211,111 +1437,114 @@ h3.encart, .field-name-body h3{
 }
 
 /***** Moteur de recherche *****/
-.aphp-search-page .top .spell-check{
+.aphp-search-page .top .spell-check {
   margin-bottom: 38px;
 }
 
 /***** Cookies *****/
-#sliding-popup.sliding-popup-bottom{
-  height: auto!important;
+#sliding-popup.sliding-popup-bottom {
+  height: auto !important;
   background: rgba(0, 0, 0, 0.7);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 100;
   padding-top: 7px;
   padding-bottom: 2px;
 }
-#sliding-popup.sliding-popup-bottom #popup-text{
-  position: relative; left: -25px;
+#sliding-popup.sliding-popup-bottom #popup-text {
+  position: relative;
+  left: -25px;
   font-weight: normal;
   max-width: 89%;
 }
-#sliding-popup.sliding-popup-bottom #popup-text p{
+#sliding-popup.sliding-popup-bottom #popup-text p {
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: normal;
 }
-#sliding-popup.sliding-popup-bottom #popup-buttons{
+#sliding-popup.sliding-popup-bottom #popup-buttons {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-size: 1.3rem;
-  position: absolute; right: 80px;
+  position: absolute;
+  right: 80px;
   top: -5px;
 }
 .pane-pane-messages,
-.pane-page-title{
-  clear:both;
+.pane-page-title {
+  clear: both;
 }
-.aphp-search-page .top .tab a{
-  transition:all 0.4s ease;
+.aphp-search-page .top .tab a {
+  transition: all 0.4s ease;
 }
-.page-actualites .contextual-links-region article{
+.page-actualites .contextual-links-region article {
   position: static;
 }
 
 /********** Listes de publications & événements **********/
 
 .publications .pane-page-content,
-.publications-pro .pane-page-content{
-  position: relative; top: 25px;
+.publications-pro .pane-page-content {
+  position: relative;
+  top: 25px;
 }
 .publications .view-publications,
-.publications-pro .view-publications{
+.publications-pro .view-publications {
   margin-bottom: 60px;
 }
-.agenda .view-agenda{
+.agenda .view-agenda {
   margin-bottom: 40px;
 }
 .bibliotheque-liens .view-liens-utiles .view-content,
 .agenda .view-agenda .view-content,
 .publications .view-publications .view-content,
-.publications-pro .view-publications .view-content{
+.publications-pro .view-publications .view-content {
   background: #ffffff;
   padding: 20px;
 }
 .bibliotheque-liens .view-liens-utiles .view-content .views-row,
 .agenda .view-agenda .view-content .views-row,
 .publications .view-publications .view-content .views-row,
-.publications-pro .view-publications .view-content .views-row{
+.publications-pro .view-publications .view-content .views-row {
   height: 255px;
   padding: 24px 27px 20px 27px;
   border-bottom: 3px solid #ececec;
 }
-.bibliotheque-liens .view-liens-utiles .view-content .views-row{
+.bibliotheque-liens .view-liens-utiles .view-content .views-row {
   min-height: 135px;
   height: auto;
   padding-bottom: 24px;
 }
-.agenda .view-agenda .view-content .views-row{
+.agenda .view-agenda .view-content .views-row {
   height: 192px;
 }
 .bibliotheque-liens .view-liens-utiles .view-header,
 .agenda .view-agenda .view-header,
 .publications .view-publications .view-header,
-.publications-pro .view-publications .view-header{
+.publications-pro .view-publications .view-header {
   font-weight: bold;
 }
-.bibliotheque-liens .view-liens-utiles .view-header{
+.bibliotheque-liens .view-liens-utiles .view-header {
   margin-top: 35px;
   margin-bottom: 40px;
 }
-.agenda .view-agenda .view-header{
+.agenda .view-agenda .view-header {
   padding: 35px 0 15px 0;
 }
 .publications .view-publications .view-filters,
-.publications-pro .view-publications .view-filters{
+.publications-pro .view-publications .view-filters {
   margin-top: 45px;
 }
 .bibliotheque-liens .view-liens-utiles > div:nth-child(7),
 .agenda .view-agenda > div:nth-child(7),
 .publications .view-publications > div:nth-child(7),
-.publications-pro .view-publications > div:nth-child(7){
+.publications-pro .view-publications > div:nth-child(7) {
   background: #ffffff;
   padding: 20px 45px;
   margin-top: -1px;
   margin-bottom: 40px;
 }
 .publications .view-publications .view-empty,
-.publications .view-publications .view-empty{
+.publications .view-publications .view-empty {
   height: 70px;
   padding: 20px 20px 10px 20px;
   margin-bottom: 40px;
@@ -1325,53 +1554,83 @@ h3.encart, .field-name-body h3{
 .publications .views-exposed-form .views-exposed-widget .form-text,
 .publications .views-exposed-form .views-exposed-widget select,
 .publications-pro .views-exposed-form .views-exposed-widget .form-text,
-.publications-pro .views-exposed-form .views-exposed-widget select{
+.publications-pro .views-exposed-form .views-exposed-widget select {
   width: 355px;
 }
 .agenda #edit-field-cibles-evenement-tid-wrapper,
 .publications #edit-field-mots-cles-tid-wrapper,
-.publications-pro #edit-field-mots-cles-tid-wrapper{
+.publications-pro #edit-field-mots-cles-tid-wrapper {
   width: 555px;
 }
-.agenda #edit-field-type-evenement-tid-wrapper{
+.agenda #edit-field-type-evenement-tid-wrapper {
   width: 625px;
 }
 .publications #edit-field-mots-cles-tid-wrapper #edit-field-mots-cles-tid,
-.publications-pro #edit-field-mots-cles-tid-wrapper #edit-field-mots-cles-tid{
-  position: relative; left: 79px;
+.publications-pro #edit-field-mots-cles-tid-wrapper #edit-field-mots-cles-tid {
+  position: relative;
+  left: 79px;
 }
 .publications #edit-field-type-de-publication-tid-wrapper,
-.publications-pro #edit-field-type-de-publication-tid-wrapper{
+.publications-pro #edit-field-type-de-publication-tid-wrapper {
   width: 627px;
 }
 .publications #edit-field-public-tid-wrapper,
-.publications-pro #edit-field-public-tid-wrapper{
+.publications-pro #edit-field-public-tid-wrapper {
   width: 555px;
 }
 .publications #edit-field-thematique-tid-wrapper,
-.publications-pro #edit-field-thematique-tid-wrapper{
+.publications-pro #edit-field-thematique-tid-wrapper {
   width: 607px;
   padding-right: 0;
 }
-.agenda #edit-field-cibles-evenement-tid-wrapper #edit-field-cibles-evenement-tid{
-  position: relative; left: 107px;
+.agenda
+  #edit-field-cibles-evenement-tid-wrapper
+  #edit-field-cibles-evenement-tid {
+  position: relative;
+  left: 107px;
 }
 .publications #edit-field-public-tid-wrapper #edit-field-public-tid,
-.publications-pro #edit-field-public-tid-wrapper #edit-field-public-tid{
-  position: relative; left: 72px;
+.publications-pro #edit-field-public-tid-wrapper #edit-field-public-tid {
+  position: relative;
+  left: 72px;
 }
-.publications .views-exposed-form .views-exposed-widget select#edit-field-thematique-tid,
-.publications-pro .views-exposed-form .views-exposed-widget select#edit-field-thematique-tid{
+.publications
+  .views-exposed-form
+  .views-exposed-widget
+  select#edit-field-thematique-tid,
+.publications-pro
+  .views-exposed-form
+  .views-exposed-widget
+  select#edit-field-thematique-tid {
   width: 500px;
 }
-.agenda .views-exposed-form #edit-field-date-de-debut-value-value-wrapper .element-invisible,
-.agenda .views-exposed-form #edit-field-date-de-fin-value-value-wrapper .element-invisible,
-.publications .views-exposed-form #edit-field-date-de-creation-value-wrapper .element-invisible,
-.publications .views-exposed-form #edit-field-date-de-creation-value-1-wrapper .element-invisible,
-.publications-pro .views-exposed-form #edit-field-date-de-creation-value-wrapper .element-invisible,
-.publications-pro .views-exposed-form #edit-field-date-de-creation-value-1-wrapper .element-invisible{
-  height: 56px; width: 50px;
-  background: url("../images/styles/picto_cal.png") 0 0 no-repeat;
+.agenda
+  .views-exposed-form
+  #edit-field-date-de-debut-value-value-wrapper
+  .element-invisible,
+.agenda
+  .views-exposed-form
+  #edit-field-date-de-fin-value-value-wrapper
+  .element-invisible,
+.publications
+  .views-exposed-form
+  #edit-field-date-de-creation-value-wrapper
+  .element-invisible,
+.publications
+  .views-exposed-form
+  #edit-field-date-de-creation-value-1-wrapper
+  .element-invisible,
+.publications-pro
+  .views-exposed-form
+  #edit-field-date-de-creation-value-wrapper
+  .element-invisible,
+.publications-pro
+  .views-exposed-form
+  #edit-field-date-de-creation-value-1-wrapper
+  .element-invisible {
+  height: 56px;
+  width: 50px;
+  background: url('../images/styles/picto_cal.png') 0 0 no-repeat;
   position: relative !important;
   left: 10px;
   float: right;
@@ -1379,151 +1638,192 @@ h3.encart, .field-name-body h3{
   font-size: 0rem;
   cursor: pointer;
 }
-.agenda .views-exposed-form #edit-field-date-de-debut-value-value-wrapper .form-text,
-.agenda .views-exposed-form #edit-field-date-de-fin-value-value-wrapper .form-text,
-.publications .views-exposed-form #edit-field-date-de-creation-value-wrapper .form-text,
-.publications .views-exposed-form #edit-field-date-de-creation-value-1-wrapper .form-text,
-.publications-pro .views-exposed-form #edit-field-date-de-creation-value-wrapper .form-text,
-.publications-pro .views-exposed-form #edit-field-date-de-creation-value-1-wrapper .form-text{
+.agenda
+  .views-exposed-form
+  #edit-field-date-de-debut-value-value-wrapper
+  .form-text,
+.agenda
+  .views-exposed-form
+  #edit-field-date-de-fin-value-value-wrapper
+  .form-text,
+.publications
+  .views-exposed-form
+  #edit-field-date-de-creation-value-wrapper
+  .form-text,
+.publications
+  .views-exposed-form
+  #edit-field-date-de-creation-value-1-wrapper
+  .form-text,
+.publications-pro
+  .views-exposed-form
+  #edit-field-date-de-creation-value-wrapper
+  .form-text,
+.publications-pro
+  .views-exposed-form
+  #edit-field-date-de-creation-value-1-wrapper
+  .form-text {
   width: 155px;
 }
 .agenda .view-agenda .views-field-field-media-rattache,
 .publications .view-publications .views-field-field-visuel,
-.publications-pro .view-publications .views-field-field-visuel{
+.publications-pro .view-publications .views-field-field-visuel {
   width: auto;
   float: left;
   margin-right: 24px;
 }
 .agenda .view-agenda .views-field-field-date-de-debut,
 .publications .view-publications .views-field-field-date-de-creation,
-.publications-pro .view-publications .views-field-field-date-de-creation{
-  height: 100px; width: auto;
+.publications-pro .view-publications .views-field-field-date-de-creation {
+  height: 100px;
+  width: auto;
   float: left;
   margin-top: 10px;
 }
-.publications-pro .view-publications .views-field-field-date-de-creation{
+.publications-pro .view-publications .views-field-field-date-de-creation {
   margin-top: 30px;
 }
 .agenda .view-agenda .views-field-field-date-de-debut,
-.publications .view-publications .views-field-field-date-de-creation{
+.publications .view-publications .views-field-field-date-de-creation {
   margin-top: 0;
 }
 .agenda .view-agenda .views-field-field-date-de-fin,
 .publications .view-publications .views-field-filesize,
-.publications-pro .view-publications .views-field-filesize{
+.publications-pro .view-publications .views-field-filesize {
   width: 155px;
   float: left;
   position: relative;
   top: 75px;
   left: -142px;
 }
-.agenda .view-agenda .views-field-field-date-de-fin{
+.agenda .view-agenda .views-field-field-date-de-fin {
   height: 70px;
   left: -147px;
 }
 .agenda .view-agenda .views-field-field-type-evenement,
 .agenda .view-agenda .views-field-field-cibles-evenement,
 .publications .view-publications .views-field-field-thematique,
-.publications-pro .view-publications .views-field-field-thematique{
+.publications-pro .view-publications .views-field-field-thematique {
   width: 640px;
   float: left;
   margin-top: 5px;
-  position: relative; left: -95px;
+  position: relative;
+  left: -95px;
 }
 .agenda .view-agenda .views-field-field-type-evenement,
-.agenda .view-agenda .views-field-field-cibles-evenement{
+.agenda .view-agenda .views-field-field-cibles-evenement {
   width: 77px;
   left: -100px;
 }
-.publications-pro .view-publications .views-field-field-thematique{
-  top: -38px; left: 60px;
+.publications-pro .view-publications .views-field-field-thematique {
+  top: -38px;
+  left: 60px;
   margin-top: 0;
 }
 .publications .view-publications .views-field-field-type-de-publication,
-.publications-pro .view-publications .views-field-field-type-de-publication{
+.publications-pro .view-publications .views-field-field-type-de-publication {
   width: 640px;
   float: left;
   margin-top: 8px;
   padding-left: 10px;
-  position: relative; left: -95px;
+  position: relative;
+  left: -95px;
 }
-.publications-pro .view-publications .views-field-field-type-de-publication{
-  top: -30px; left: 60px;
+.publications-pro .view-publications .views-field-field-type-de-publication {
+  top: -30px;
+  left: 60px;
   margin-top: 0;
 }
 .publications .view-publications .views-field-field-public,
-.publications-pro .view-publications .views-field-field-public{
+.publications-pro .view-publications .views-field-field-public {
   width: 640px;
   float: left;
   margin-top: 2px;
   padding-left: 10px;
-  position: relative; left: -95px;
+  position: relative;
+  left: -95px;
 }
-.publications-pro .view-publications .views-field-field-public{
-  top: -28px; left: 60px;
+.publications-pro .view-publications .views-field-field-public {
+  top: -28px;
+  left: 60px;
   margin-top: 0;
 }
 .agenda .view-agenda .views-field-title,
 .publications .view-publications .views-field-title,
-.publications-pro .view-publications .views-field-title{
+.publications-pro .view-publications .views-field-title {
   width: 640px;
   float: left;
   margin-top: 10px;
   padding-left: 10px;
-  position: relative; left: -95px;
+  position: relative;
+  left: -95px;
 }
-.publications-pro .view-publications .views-field-title{
-  top: -15px; left: 60px;
+.publications-pro .view-publications .views-field-title {
+  top: -15px;
+  left: 60px;
   margin-top: 0;
 }
-.agenda .view-agenda .views-field-title{
-  top: -35px; left: 55px;
+.agenda .view-agenda .views-field-title {
+  top: -35px;
+  left: 55px;
   margin-top: 0;
 }
 .agenda .view-agenda .views-field-field-corps-de-texte,
 .publications .view-publications .views-field-field-description,
-.publications-pro .view-publications .views-field-field-description{
+.publications-pro .view-publications .views-field-field-description {
   width: 640px;
   float: left;
   margin-top: 5px;
   padding-left: 10px;
-  position: relative; left: -95px;
+  position: relative;
+  left: -95px;
 }
-.publications-pro .view-publications .views-field-field-description{
-  top: -10px; left: 60px;
+.publications-pro .view-publications .views-field-field-description {
+  top: -10px;
+  left: 60px;
   margin-top: 0;
 }
-.agenda .view-agenda .views-field-field-corps-de-texte{
-  top: -30px; left: 55px;
+.agenda .view-agenda .views-field-field-corps-de-texte {
+  top: -30px;
+  left: 55px;
   margin-top: 0;
 }
 .publications .view-publications .views-field-filesize .field-content,
-.publications-pro .view-publications .views-field-field-auteur .field-content{
+.publications-pro .view-publications .views-field-field-auteur .field-content {
   display: block;
 }
 .agenda .view-agenda .views-field-field-date-de-fin:after,
 .publications .view-publications .views-field-filesize:after,
-.publications-pro .view-publications .views-field-field-date-de-creation:after{
+.publications-pro .view-publications .views-field-field-date-de-creation:after {
   content: '';
-  height: 210px; width: 4px;
-  background: url("../images/styles/bg_dashed_horizontal_blue.png") 0 0 repeat-y;
-  position: relative; top: -120px; right: -30px;
+  height: 210px;
+  width: 4px;
+  background: url('../images/styles/bg_dashed_horizontal_blue.png') 0 0 repeat-y;
+  position: relative;
+  top: -120px;
+  right: -30px;
   display: block;
   float: right;
 }
-.agenda .view-agenda .views-field-field-date-de-fin:after{
+.agenda .view-agenda .views-field-field-date-de-fin:after {
   height: 150px;
 }
-.publications-pro .view-publications .views-field-field-date-de-creation:after{
+.publications-pro .view-publications .views-field-field-date-de-creation:after {
   height: 212px;
-  top: -120px; right: -43px;
+  top: -120px;
+  right: -43px;
 }
 .agenda .view-agenda .views-field-field-date-de-debut .views-label,
 .agenda .view-agenda .views-field-field-date-de-fin .views-label,
-.publications .view-publications .views-field-field-date-de-creation .views-label,
+.publications
+  .view-publications
+  .views-field-field-date-de-creation
+  .views-label,
 .publications .view-publications .views-field-filesize .views-label,
-.publications-pro .view-publications .views-field-field-date-de-creation .views-label,
-.publications-pro .view-publications .views-field-field-auteur .views-label{
+.publications-pro
+  .view-publications
+  .views-field-field-date-de-creation
+  .views-label,
+.publications-pro .view-publications .views-field-field-auteur .views-label {
   font-size: 14px;
   font-size: 1.4rem;
   font-family: arial;
@@ -1531,21 +1831,36 @@ h3.encart, .field-name-body h3{
 }
 .agenda .view-agenda .views-field-field-date-de-debut .field-content,
 .agenda .view-agenda .views-field-field-date-de-fin .field-content,
-.publications .view-publications .views-field-field-date-de-creation .field-content,
+.publications
+  .view-publications
+  .views-field-field-date-de-creation
+  .field-content,
 .publications .view-publications .views-field-filesize .field-content,
-.publications-pro .view-publications .views-field-field-date-de-creation .field-content,
-.publications-pro .view-publications .views-field-field-auteur .field-content{
+.publications-pro
+  .view-publications
+  .views-field-field-date-de-creation
+  .field-content,
+.publications-pro .view-publications .views-field-field-auteur .field-content {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: georgia;
   font-style: italic;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-thematique .field-content,
-.bibliotheque-liens .view-liens-utiles .views-field-field-categorie .field-content,
+.bibliotheque-liens
+  .view-liens-utiles
+  .views-field-field-thematique
+  .field-content,
+.bibliotheque-liens
+  .view-liens-utiles
+  .views-field-field-categorie
+  .field-content,
 .agenda .view-agenda .views-field-field-type-evenement .field-content,
 .agenda .view-agenda .views-field-field-cibles-evenement .field-content,
 .publications .view-publications .views-field-field-thematique .field-content,
-.publications-pro .view-publications .views-field-field-thematique .field-content{
+.publications-pro
+  .view-publications
+  .views-field-field-thematique
+  .field-content {
   width: auto;
   float: left;
   padding: 0 10px;
@@ -1555,52 +1870,61 @@ h3.encart, .field-name-body h3{
   text-transform: uppercase;
   border-right: 2px solid #ececec;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-categorie .field-content{
+.bibliotheque-liens
+  .view-liens-utiles
+  .views-field-field-categorie
+  .field-content {
   border-right: none;
   padding-right: 0;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-thematique{
+.bibliotheque-liens .view-liens-utiles .views-field-field-thematique {
   margin-left: -9px;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-thematique .field-content,
-.bibliotheque-liens .view-liens-utiles .views-field-field-categorie .field-content{
+.bibliotheque-liens
+  .view-liens-utiles
+  .views-field-field-thematique
+  .field-content,
+.bibliotheque-liens
+  .view-liens-utiles
+  .views-field-field-categorie
+  .field-content {
   margin-top: 5px;
 }
 .bibliotheque-liens .view-liens-utiles #edit-field-thematique-tid,
 .bibliotheque-liens .view-liens-utiles #edit-field-categorie-tid,
-.bibliotheque-liens .view-liens-utiles #edit-field-mots-cles-tid{
+.bibliotheque-liens .view-liens-utiles #edit-field-mots-cles-tid {
   width: 355px;
 }
-.bibliotheque-liens .view-liens-utiles #edit-field-mots-cles-tid-wrapper{
+.bibliotheque-liens .view-liens-utiles #edit-field-mots-cles-tid-wrapper {
   margin-left: 59px;
 }
-.bibliotheque-liens .view-liens-utiles #edit-field-thematique-tid-wrapper{
+.bibliotheque-liens .view-liens-utiles #edit-field-thematique-tid-wrapper {
   margin-left: 25px;
 }
 
 .publications .view-publications .views-field-field-type-de-publication,
 .publications-pro .view-publications .views-field-field-type-de-publication,
 .publications .view-publications .views-field-field-public .field-content,
-.publications-pro .view-publications .views-field-field-public .field-content{
+.publications-pro .view-publications .views-field-field-public .field-content {
   font-size: 15px;
   font-size: 1.5rem;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-title{
+.bibliotheque-liens .view-liens-utiles .views-field-title {
   float: left;
   margin-right: 10px;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-descriptif{
+.bibliotheque-liens .view-liens-utiles .views-field-field-descriptif {
   margin-top: 27px;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-descriptif p{
+.bibliotheque-liens .view-liens-utiles .views-field-field-descriptif p {
   margin: 0;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-url{
+.bibliotheque-liens .view-liens-utiles .views-field-field-url {
   clear: both;
   margin: 0 0 0 2px;
   padding: 5px 0 10px 0;
 }
-.bibliotheque-liens .view-liens-utiles .views-field-field-url a{
+.bibliotheque-liens .view-liens-utiles .views-field-field-url a {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: georgia;
@@ -1609,34 +1933,37 @@ h3.encart, .field-name-body h3{
 .bibliotheque-liens .view-liens-utiles .views-field-title .field-content,
 .agenda .view-agenda .views-field-title .field-content,
 .publications .view-publications .views-field-title .field-content,
-.publications-pro .view-publications .views-field-title .field-content{
+.publications-pro .view-publications .views-field-title .field-content {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: 600;
 }
 .agenda .view-agenda .views-field-field-corps-de-texte .field-content,
 .publications .view-publications .views-field-field-description .field-content,
-.publications-pro .view-publications .views-field-field-description .field-content{
+.publications-pro
+  .view-publications
+  .views-field-field-description
+  .field-content {
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 27px;
   line-height: 2.7rem;
 }
 .publications .view-publications .views-field-download .field-content,
-.publications-pro .view-publications .views-field-download .field-content{
+.publications-pro .view-publications .views-field-download .field-content {
   display: none;
 }
 
 /********** Audio : page détail **********/
-.audio-detail .pane-custom{
+.audio-detail .pane-custom {
   height: 22px;
   margin: 20px 0 0 0;
   text-transform: uppercase;
 }
-.audio-detail .pane-node-field-thematique{
+.audio-detail .pane-node-field-thematique {
   padding: 25px 0 50px;
 }
-.audio-detail .pane-node-field-thematique .field-item h2{
+.audio-detail .pane-node-field-thematique .field-item h2 {
   width: auto;
   float: left;
   font-size: 12px;
@@ -1647,47 +1974,49 @@ h3.encart, .field-name-body h3{
   text-transform: uppercase;
   border-right: 2px solid #000000;
 }
-.audio-detail .pane-node-field-thematique .field-item:last-child h2{
+.audio-detail .pane-node-field-thematique .field-item:last-child h2 {
   border-right: none;
 }
-.audio-detail .pane-node-field-credits{
+.audio-detail .pane-node-field-credits {
   margin-top: -5px;
   padding: 25px 25px 15px 25px;
   background: white;
   font-weight: 600;
 }
-.audio-detail .pane-node-field-credits h2{
+.audio-detail .pane-node-field-credits h2 {
   font-size: 17px;
   text-transform: initial;
   font-weight: 600;
   margin: 0 3px 0 0;
   float: left;
 }
-.audio-detail .pane-node-field-description{
+.audio-detail .pane-node-field-description {
   padding: 0 25px 35px 25px;
   background: white;
 }
 
 /********** Vidéo : page détail **********/
 .video-detail #media-dailymotion-1 iframe,
-.video-detail #media-dailymotion-1 .media-dailymotion-preview-wrapper{
-  height: 100%!important;
+.video-detail #media-dailymotion-1 .media-dailymotion-preview-wrapper {
+  height: 100% !important;
 }
-.video-detail .field-name-field-reference-dailymotion .field-name-field-credits{
+.video-detail
+  .field-name-field-reference-dailymotion
+  .field-name-field-credits {
   display: none;
 }
-.video-detail .pane-custom{
+.video-detail .pane-custom {
   height: 22px;
   margin: 20px 0 0 0;
   text-transform: uppercase;
 }
-.node-type-video.video-detail .pane-page-content{
+.node-type-video.video-detail .pane-page-content {
   padding-top: 40px;
 }
-.video-detail .pane-node-field-thematique{
+.video-detail .pane-node-field-thematique {
   padding: 25px 0 50px;
 }
-.video-detail .pane-node-field-thematique .field-item h2{
+.video-detail .pane-node-field-thematique .field-item h2 {
   width: auto;
   float: left;
   font-size: 12px;
@@ -1698,54 +2027,71 @@ h3.encart, .field-name-body h3{
   text-transform: uppercase;
   border-right: 2px solid #000000;
 }
-.video-detail .pane-node-field-thematique .field-item:last-child h2{
+.video-detail .pane-node-field-thematique .field-item:last-child h2 {
   border-right: none;
 }
-.video-detail .pane-node-field-credits{
+.video-detail .pane-node-field-credits {
   padding: 25px 25px 15px 25px;
   background: white;
   font-weight: 600;
 }
-.video-detail .pane-node-field-credits h2{
+.video-detail .pane-node-field-credits h2 {
   font-size: 17px;
   text-transform: initial;
   font-weight: 600;
   margin: 0 3px 0 0;
   float: left;
 }
-.video-detail .pane-node-field-description{
+.video-detail .pane-node-field-description {
   padding: 0 25px 35px 25px;
   background: white;
 }
 
 /********** Espace multimédia **********/
 
-.espace-multimedia .center-wrapper{
+.espace-multimedia .center-wrapper {
   width: 1224px;
 }
 .espace-multimedia .links.inline,
-.espace-multimedia p.submitted{
+.espace-multimedia p.submitted {
   display: none;
 }
-.espace-multimedia .intro-espace-multimedia{
+.espace-multimedia .intro-espace-multimedia {
   margin-top: 25px;
   margin-bottom: 40px;
 }
-.espace-multimedia .view-espace-multimedia .view-header{
+.espace-multimedia .view-espace-multimedia .view-header {
   font-weight: bold;
 }
 
-.espace-multimedia .view-espace-multimedia .view-filters #edit-type-1-wrapper .views-widget{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-type-1-wrapper
+  .views-widget {
   margin-left: 37px;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-type-1-wrapper input[type="checkbox"]{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-type-1-wrapper
+  input[type='checkbox'] {
   display: none;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-type-1-wrapper label{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-type-1-wrapper
+  label {
   height: 20px;
   line-height: 25px;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-type-1-wrapper .form-type-bef-checkbox label{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-type-1-wrapper
+  .form-type-bef-checkbox
+  label {
   height: 26px;
   cursor: pointer;
   line-height: 26px;
@@ -1753,56 +2099,112 @@ h3.encart, .field-name-body h3{
   padding-left: 31px;
   background: url('../images/styles/picto-checkbox-off.png') no-repeat;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-type-1-wrapper .form-type-bef-checkbox .option.checked,
-.espace-multimedia .view-espace-multimedia .view-filters #edit-type-1-wrapper .form-type-bef-checkbox .option:hover{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-type-1-wrapper
+  .form-type-bef-checkbox
+  .option.checked,
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-type-1-wrapper
+  .form-type-bef-checkbox
+  .option:hover {
   background: url('../images/styles/picto-checkbox-on.png') no-repeat;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-field-thematique-tid-wrapper{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-field-thematique-tid-wrapper {
   margin-left: 30px;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-field-mots-cles-tid-wrapper,
-.espace-multimedia .view-espace-multimedia .view-filters #edit-field-thematique-tid-wrapper{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-field-mots-cles-tid-wrapper,
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-field-thematique-tid-wrapper {
   padding-bottom: 25px;
 }
-.espace-multimedia .view-espace-multimedia .view-filters #edit-field-mots-cles-tid,
-.espace-multimedia .view-espace-multimedia .view-filters #edit-field-thematique-tid{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-field-mots-cles-tid,
+.espace-multimedia
+  .view-espace-multimedia
+  .view-filters
+  #edit-field-thematique-tid {
   width: 355px;
 }
-.espace-multimedia .view-espace-multimedia .view-content .field-type-soundcloud{
-  height: 212px; width: 286px;
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  .field-type-soundcloud {
+  height: 212px;
+  width: 286px;
 }
-.espace-multimedia .view-espace-multimedia .view-content .field-type-soundcloud iframe{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  .field-type-soundcloud
+  iframe {
   height: 208px;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node{
-  height: 296px; width: 286px;
+.espace-multimedia .view-espace-multimedia .view-content > div > .node {
+  height: 296px;
+  width: 286px;
   background-color: #61d5d4;
   margin-bottom: 20px;
   margin-right: 20px;
   float: left;
   overflow: hidden;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node:hover{
+.espace-multimedia .view-espace-multimedia .view-content > div > .node:hover {
   background-color: #c22e3c;
   color: white;
   border-color: white;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node > .field-name-field-media-rattache{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  > .field-name-field-media-rattache {
   height: 213px;
   overflow: hidden;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node > header{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  > header {
   margin-top: 2px;
   margin-bottom: 4px;
   padding: 0 10px 0 15px;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node > header h3{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  > header
+  h3 {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: 600;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node .field-name-field-thematique{
-  height: 30px; width: auto;
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  .field-name-field-thematique {
+  height: 30px;
+  width: auto;
   padding: 14px 0 0 15px;
   margin-bottom: 1px;
   font-size: 12px;
@@ -1811,17 +2213,45 @@ h3.encart, .field-name-body h3{
   text-transform: uppercase;
   overflow: hidden;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node .field-name-field-thematique .field-item:nth-child(1),
-.espace-multimedia .view-espace-multimedia .view-content > div > .node .field-name-field-thematique .field-item:nth-child(2){
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  .field-name-field-thematique
+  .field-item:nth-child(1),
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  .field-name-field-thematique
+  .field-item:nth-child(2) {
   float: left;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node .field-name-field-thematique .field-item:nth-child(2){
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  .field-name-field-thematique
+  .field-item:nth-child(2) {
   padding-left: 10px;
   border-left: 2px solid #000000;
   margin-left: 10px;
 }
-.espace-multimedia .view-espace-multimedia .view-content > div > .node .field-name-field-description,
-.espace-multimedia .view-espace-multimedia .view-content > div > .node .field-name-field-description-media{
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  .field-name-field-description,
+.espace-multimedia
+  .view-espace-multimedia
+  .view-content
+  > div
+  > .node
+  .field-name-field-description-media {
   font-size: 13px;
   font-size: 1.3rem;
   font-style: italic;
@@ -1830,16 +2260,16 @@ h3.encart, .field-name-body h3{
 
 /********** Page détail publication **********/
 
-.detail-publication .pane-page-content{
+.detail-publication .pane-page-content {
   padding: 47px;
   margin-top: 35px;
   background: #ffffff;
 }
-.detail-publication .pane-page-content .field-name-field-visuel{
+.detail-publication .pane-page-content .field-name-field-visuel {
   float: left;
   margin-right: 25px;
 }
-.detail-publication .pane-page-content .field-name-field-auteur{
+.detail-publication .pane-page-content .field-name-field-auteur {
   width: 200px;
   font-size: 16px;
   font-size: 1.6rem;
@@ -1847,19 +2277,22 @@ h3.encart, .field-name-body h3{
   font-style: italic;
   float: left;
 }
-.detail-publication .pane-page-content .field-name-field-date-de-creation{
+.detail-publication .pane-page-content .field-name-field-date-de-creation {
   float: left;
   position: relative;
   top: 25px;
   left: -200px;
 }
-.detail-publication .pane-page-content .field-name-field-date-de-creation .field-items{
+.detail-publication
+  .pane-page-content
+  .field-name-field-date-de-creation
+  .field-items {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: georgia;
   font-style: italic;
 }
-.detail-publication .pane-page-content .field-name-field-thematique{
+.detail-publication .pane-page-content .field-name-field-thematique {
   width: auto;
   float: left;
   padding: 0 10px;
@@ -1870,7 +2303,7 @@ h3.encart, .field-name-body h3{
   border-right: 2px solid #ececec;
   margin-top: 2px;
 }
-.detail-publication .pane-page-content .field-name-field-type-de-publication{
+.detail-publication .pane-page-content .field-name-field-type-de-publication {
   width: auto;
   float: left;
   padding: 0 10px;
@@ -1881,7 +2314,7 @@ h3.encart, .field-name-body h3{
   border-right: 2px solid #ececec;
   margin-top: 2px;
 }
-.detail-publication .pane-page-content .field-name-field-public{
+.detail-publication .pane-page-content .field-name-field-public {
   width: auto;
   float: left;
   padding: 0 10px;
@@ -1892,114 +2325,133 @@ h3.encart, .field-name-body h3{
   border-right: 2px solid #ececec;
   margin-top: 2px;
 }
-.detail-publication .pane-page-content .field-name-field-description{
+.detail-publication .pane-page-content .field-name-field-description {
   float: left;
   width: 84%;
   margin-top: 50px;
 }
-.detail-publication .pane-page-content .field-name-field-description p{
+.detail-publication .pane-page-content .field-name-field-description p {
   line-height: 28px;
   line-height: 2.8rem;
 }
 
 /********************* Page ressource ******************************/
 
-.page-ressources-presse #views-exposed-form-ressources-presse-panel-pane-ressources-presse-liste
-label.element-invisible{
+.page-ressources-presse
+  #views-exposed-form-ressources-presse-panel-pane-ressources-presse-liste
+  label.element-invisible {
   overflow: visible !important;
   width: 51px;
   height: 58px;
-  background: url("../images/styles/picto_cal.png") 0 0 no-repeat;
+  background: url('../images/styles/picto_cal.png') 0 0 no-repeat;
   cursor: pointer;
   text-indent: -999em;
   clip: rect(0px, 52px, 57px, 0px);
 }
-.page-ressources-presse #edit-date-filter-fin-value label.element-invisible{
+.page-ressources-presse #edit-date-filter-fin-value label.element-invisible {
   left: 272px;
 }
-.page-ressources-presse #edit-date-filter-value label.element-invisible{
+.page-ressources-presse #edit-date-filter-value label.element-invisible {
   left: 272px;
 }
-.page-ressources-presse #edit-date-filter-value{
+.page-ressources-presse #edit-date-filter-value {
   position: relative;
 }
-.page-ressources-presse #edit-date-filter-fin-wrapper{
+.page-ressources-presse #edit-date-filter-fin-wrapper {
   position: relative;
 }
-.page-ressources-presse #edit-mots-cles-wrapper{
+.page-ressources-presse #edit-mots-cles-wrapper {
   width: 323px;
   padding-right: 0px;
 }
 
 /*****************page recherche*****************/
 .page-recherche .description,
-.aphp-search-page .description{
+.aphp-search-page .description {
   margin-top: 24px;
 }
 
 /****************** home page ************************/
 .node-type-article .views-slideshow-controls-text-previous a,
-.node-type-article .views-slideshow-controls-text-next a{
-  top: 57%!important;
-  z-index: 100!important;
+.node-type-article .views-slideshow-controls-text-next a {
+  top: 57% !important;
+  z-index: 100 !important;
 }
-.photo .pane-node-field-image{
+.photo .pane-node-field-image {
   margin-top: 40px;
   margin-bottom: 10px;
 }
-.photo .pane-node-field-credits h2{
+.photo .pane-node-field-credits h2 {
   text-transform: initial;
   font-weight: initial;
   font-size: 17px;
   float: left;
   margin-right: 4px;
 }
-.photo .pane-node-field-credits .field-name-field-credits{
+.photo .pane-node-field-credits .field-name-field-credits {
   font-style: italic;
 }
-.widget_pager .views-slideshow-pager-field-item div{
+.widget_pager .views-slideshow-pager-field-item div {
   display: none;
 }
-.node-type-article .view-aphp-diaporama .widget_pager .views-slideshow-pager-field-item div,
-.node-type-rubrique .view-aphp-diaporama .widget_pager .views-slideshow-pager-field-item div{
-  height: 14px; width: 14px;
+.node-type-article
+  .view-aphp-diaporama
+  .widget_pager
+  .views-slideshow-pager-field-item
+  div,
+.node-type-rubrique
+  .view-aphp-diaporama
+  .widget_pager
+  .views-slideshow-pager-field-item
+  div {
+  height: 14px;
+  width: 14px;
   display: inline-block;
   font-size: 0;
 }
 .node-type-article .view-aphp-diaporama .widget_pager,
-.node-type-rubrique .view-aphp-diaporama .widget_pager{
-  top: -65px; right: 0;
+.node-type-rubrique .view-aphp-diaporama .widget_pager {
+  top: -65px;
+  right: 0;
 }
 .node-type-article .view-aphp-diaporama .views_slideshow_cycle_slide,
-.node-type-rubrique .view-aphp-diaporama .views_slideshow_cycle_slide{
-  width: 800px!important;
+.node-type-rubrique .view-aphp-diaporama .views_slideshow_cycle_slide {
+  width: 800px !important;
 }
 .node-type-article .view-aphp-diaporama .views-slideshow-controls-text-previous,
-.node-type-rubrique .view-aphp-diaporama .views-slideshow-controls-text-previous{
-  top: 40%; left: -12px;
+.node-type-rubrique
+  .view-aphp-diaporama
+  .views-slideshow-controls-text-previous {
+  top: 40%;
+  left: -12px;
 }
 .node-type-article .view-aphp-diaporama .views-slideshow-controls-text-next,
-.node-type-rubrique .view-aphp-diaporama .views-slideshow-controls-text-next{
-  top: 40%; right: -15px;
+.node-type-rubrique .view-aphp-diaporama .views-slideshow-controls-text-next {
+  top: 40%;
+  right: -15px;
 }
-.node-type-article .view-aphp-diaporama .views-slideshow-cycle-main-frame-row-item,
-.node-type-rubrique .view-aphp-diaporama .views-slideshow-cycle-main-frame-row-item {
+.node-type-article
+  .view-aphp-diaporama
+  .views-slideshow-cycle-main-frame-row-item,
+.node-type-rubrique
+  .view-aphp-diaporama
+  .views-slideshow-cycle-main-frame-row-item {
   overflow: hidden;
 }
 .node-type-article .view-aphp-diaporama .views-field-field-photo,
-.node-type-rubrique .view-aphp-diaporama .views-field-field-photo{
+.node-type-rubrique .view-aphp-diaporama .views-field-field-photo {
   margin: 0;
   width: 50%;
 }
 .node-type-article .view-aphp-diaporama .diaporama-photo,
-.node-type-rubrique .view-aphp-diaporama .diaporama-photo{
+.node-type-rubrique .view-aphp-diaporama .diaporama-photo {
   float: left;
   margin: 0;
   padding-left: 1em;
   width: 50%;
 }
 .node-type-article .view-aphp-diaporama .diaporama-photo .photo-thematique,
-.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-thematique{
+.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-thematique {
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -2008,20 +2460,20 @@ label.element-invisible{
   text-align: left;
 }
 .node-type-article .view-aphp-diaporama .diaporama-photo .photo-title,
-.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-title{
+.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-title {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: bold;
   text-align: left;
 }
 .node-type-article .view-aphp-diaporama .diaporama-photo .photo-description,
-.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-description{
-  font-size: 1.0em;
+.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-description {
+  font-size: 1em;
   text-align: left;
 }
 .node-type-article .view-aphp-diaporama .diaporama-photo .photo-credits,
-.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-credits{
-  font-size: 1.0em;
+.node-type-rubrique .view-aphp-diaporama .diaporama-photo .photo-credits {
+  font-size: 1em;
   font-style: italic;
   text-align: left;
 }
@@ -2031,13 +2483,13 @@ label.element-invisible{
 #views_slideshow_controls_text_next_aphp_diaporama-diaporama_photo a {
   display: block;
 }
-.hospital_group li{
+.hospital_group li {
   margin-bottom: 0;
 }
-.hospital_group .hospital{
+.hospital_group .hospital {
   margin-bottom: 1.5em;
 }
-.hospital_group .hospital a{
+.hospital_group .hospital a {
   color: #00a2e0;
   font-weight: 600;
 }
@@ -2048,18 +2500,20 @@ label.element-invisible{
 }
 /* précédent */
 #views_slideshow_controls_text_previous_aphp_actualite-panel_pane_col_right_rubrique {
-  top: 85px!important;
+  top: 85px !important;
   left: 15px;
   z-index: 200;
 }
 /* suivant */
 #views_slideshow_controls_text_next_aphp_actualite-panel_pane_col_right_rubrique {
-  top: 85px!important;
+  top: 85px !important;
   right: 15px;
   z-index: 200;
 }
 /* image */
-#views_slideshow_cycle_teaser_section_aphp_actualite-panel_pane_col_right_rubrique .views-field.views-field-field-media-rattache img {
+#views_slideshow_cycle_teaser_section_aphp_actualite-panel_pane_col_right_rubrique
+  .views-field.views-field-field-media-rattache
+  img {
   width: 285px;
   height: 210px;
 }
@@ -2067,10 +2521,12 @@ label.element-invisible{
 .node-type-rubrique .view-aphp-actualite .credits_titre,
 .node-type-rubrique .view-aphp-actualite .field-name-field-credits,
 .field-name-field-contenus-rattaches .view-mode-contenus_rattaches .submitted,
-.field-name-field-contenus-rattaches .view-mode-contenus_rattaches .links.inline{
+.field-name-field-contenus-rattaches
+  .view-mode-contenus_rattaches
+  .links.inline {
   display: none;
 }
-.node-type-rubrique .view-aphp-actualite{
+.node-type-rubrique .view-aphp-actualite {
   height: auto;
   /*
   margin-top: -30px;
@@ -2078,127 +2534,181 @@ label.element-invisible{
   position: relative;*/
   z-index: 1;
 }
-.node-type-rubrique .colonne-droite .view-aphp-actualite{
+.node-type-rubrique .colonne-droite .view-aphp-actualite {
   margin-top: 0;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field{
+.node-type-rubrique .view-aphp-actualite .views-row .views-field {
   overflow: initial;
   margin-left: 0;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-field-media-rattache{
+.node-type-rubrique
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-media-rattache {
   width: 896px;
   max-width: initial;
 }
-.node-type-rubrique .colonne-droite .view-aphp-actualite .views-row .views-field-field-media-rattache{
+.node-type-rubrique
+  .colonne-droite
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-media-rattache {
   width: 100%;
   /*margin-left: 31px;*/
 }
-.node-type-rubrique .colonne-droite .view-aphp-actualite .views-row .views-field-field-media-rattache h3.node-title{
+.node-type-rubrique
+  .colonne-droite
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-media-rattache
+  h3.node-title {
   display: none;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-created{
+.node-type-rubrique .view-aphp-actualite .views-row .views-field-created {
   /*position: relative; top: 15px; left: 30px;*/
   padding: 0;
   margin: 0;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-title{
+.node-type-rubrique .view-aphp-actualite .views-row .views-field-title {
   width: 80%;
   /*position: relative; top: 15px; left: 30px;*/
-  font-size: 17px; font-size: 1.7rem;
-  line-height: 30px; line-height: 1.8em;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 30px;
+  line-height: 1.8em;
   word-break: break-word;
   overflow-wrap: break-word;
   padding: 0;
   margin: 0;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-field-chapo{
+.node-type-rubrique .view-aphp-actualite .views-row .views-field-field-chapo {
   width: 92%;
   /*position: relative; top: 20px; left: 30px;*/
-  font-size: 17px; font-size: 1.7rem;
-  line-height: 30px; line-height: 1.8em;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 30px;
+  line-height: 1.8em;
   word-break: break-word;
   overflow-wrap: break-word;
   padding-bottom: 50px;
   padding: 0;
   margin: 0;
 }
-.node-type-rubrique .colonne-droite .view-aphp-actualite .views-row .views-field-created{
+.node-type-rubrique
+  .colonne-droite
+  .view-aphp-actualite
+  .views-row
+  .views-field-created {
   margin-top: 0.5em;
   padding: 0 20px;
 }
-.node-type-rubrique .colonne-droite .view-aphp-actualite .views-row .views-field-title{
+.node-type-rubrique
+  .colonne-droite
+  .view-aphp-actualite
+  .views-row
+  .views-field-title {
   width: 100%;
   line-height: 1.2em;
   margin-top: 5px;
   padding: 0 20px;
 }
-.node-type-rubrique .colonne-droite .view-aphp-actualite .views-row .views-field-field-chapo{
+.node-type-rubrique
+  .colonne-droite
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-chapo {
   width: 100%;
   font-weight: normal;
   line-height: 1.2em;
   padding: 0 20px 20px 20px;
 }
-.node-type-rubrique .colonne-droite .pane-aphp-actualite-panel-pane-col-right-rubrique{
+.node-type-rubrique
+  .colonne-droite
+  .pane-aphp-actualite-panel-pane-col-right-rubrique {
   background: white;
   padding: 0 0 20px 0;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-field-media-rattache .media-dailymotion-outer-wrapper{
-  height: 504px!important;
+.node-type-rubrique
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-media-rattache
+  .media-dailymotion-outer-wrapper {
+  height: 504px !important;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-field-media-rattache iframe{
-  height: 504px!important;
+.node-type-rubrique
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-media-rattache
+  iframe {
+  height: 504px !important;
 }
-.node-type-rubrique .view-aphp-actualite .views-row .views-field-field-media-rattache img{
+.node-type-rubrique
+  .view-aphp-actualite
+  .views-row
+  .views-field-field-media-rattache
+  img {
   max-width: none;
 }
 
-.node-type-rubrique .view-aphp-actualite .views-slideshow-pager-field-item div{
+.node-type-rubrique .view-aphp-actualite .views-slideshow-pager-field-item div {
   display: block;
 }
-.node-type-rubrique .view-aphp-actualite .views-slideshow-pager-field-item{
+.node-type-rubrique .view-aphp-actualite .views-slideshow-pager-field-item {
   display: inline-block;
 }
 .map_filter .filter_group {
   float: left;
-  width:100%;
+  width: 100%;
   padding-left: 30px;
   margin-bottom: 30px;
-  font-size: 14px; font-size: 1.4rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.8;
 }
-.map_filter .filter_group .filter{
-  float:left;
-  width:50%;
+.map_filter .filter_group .filter {
+  float: left;
+  width: 50%;
 }
-.node-type-association .colonne-droite .field{
-  margin-top:15px;
+.node-type-association .colonne-droite .field {
+  margin-top: 15px;
 }
-.node-type-association .colonne-droite .field.field-name-field-adresse{
-  margin-top:0;
+.node-type-association .colonne-droite .field.field-name-field-adresse {
+  margin-top: 0;
 }
-.node-type-association .colonne-droite .field.field-name-field-adresse .country{
-  display:none;
+.node-type-association
+  .colonne-droite
+  .field.field-name-field-adresse
+  .country {
+  display: none;
 }
-.node-type-association .view-mode-full .field-type-taxonomy-term-reference .field-item{
-  display:inline;
+.node-type-association
+  .view-mode-full
+  .field-type-taxonomy-term-reference
+  .field-item {
+  display: inline;
 }
-.node-type-association .view-mode-full .field-type-taxonomy-term-reference .field-item:before{
-  content:"-";
-  padding:0 5px;
+.node-type-association
+  .view-mode-full
+  .field-type-taxonomy-term-reference
+  .field-item:before {
+  content: '-';
+  padding: 0 5px;
 }
-.node-type-association .view-mode-full .field-type-taxonomy-term-reference .field-item:first-child:before{
-  content:"";
-  padding:0;
+.node-type-association
+  .view-mode-full
+  .field-type-taxonomy-term-reference
+  .field-item:first-child:before {
+  content: '';
+  padding: 0;
 }
-.node-type-association .view-mode-full .field-type-taxonomy-term-reference{
-  padding-bottom:20px;
-
+.node-type-association .view-mode-full .field-type-taxonomy-term-reference {
+  padding-bottom: 20px;
 }
-.node-type-association .view-mode-full .field-name-field-type-association{
+.node-type-association .view-mode-full .field-name-field-type-association {
   border-top: 1px solid #00a2e0;
   padding-top: 50px;
 }
-.page-associations .panel-flexible-inside .panels-flexible-region-first{
+.page-associations .panel-flexible-inside .panels-flexible-region-first {
   background: none repeat scroll 0% 0% transparent;
   padding: 0px;
   width: auto;
@@ -2209,75 +2719,72 @@ label.element-invisible{
   padding-left: 0;
   height: auto;
 }
-table.views-table{
-  width:100%;
+table.views-table {
+  width: 100%;
 }
-.pane-page-content .view-content table tbody{
-    background: #eff8fd;
+.pane-page-content .view-content table tbody {
+  background: #eff8fd;
 }
 .views-table td,
 .views-table tr.even,
-.views-table tr.odd{
-  padding:0;
-  margin:0;
+.views-table tr.odd {
+  padding: 0;
+  margin: 0;
 
-  border-bottom:4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
   font-size: 15px;
   font-size: 1.5rem;
   font-weight: 600;
 }
-.view-id-annuaire_des_associations .views-table th{
+.view-id-annuaire_des_associations .views-table th {
   padding-bottom: 18px;
   padding-top: 18px;
 }
-.views-table td ul{
-  padding:0;
-  margin:0;
+.views-table td ul {
+  padding: 0;
+  margin: 0;
 }
-.views-table td li{
-  list-style:none;
-  padding:4px 0;
-  margin:0;
+.views-table td li {
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
 }
 .views-table th,
-.views-table td{
-  padding:20px 10px;
-  vertical-align:top;
+.views-table td {
+  padding: 20px 10px;
+  vertical-align: top;
 }
-.view-annuaire-des-associations  .views-table tbody td{
+.view-annuaire-des-associations .views-table tbody td {
   padding-top: 30px;
 }
-.views-table td .cell-content{
-  border-left:1px solid #45a2d8;
-  padding-left:20px;
-  height:100%;
+.views-table td .cell-content {
+  border-left: 1px solid #45a2d8;
+  padding-left: 20px;
+  height: 100%;
 }
-.views-table td:first-child .cell-content{
-  border-left:none;
+.views-table td:first-child .cell-content {
+  border-left: none;
   padding-left: 30px;
 }
-.view-annuaire-des-associations  .views-table tbody .siteweb{
+.view-annuaire-des-associations .views-table tbody .siteweb {
   color: #244a8b;
   font-weight: 600;
 }
 /******************************************************************************/
-.node-type-evenement .pane-page-title h1{
-  margin-bottom:22px;
+.node-type-evenement .pane-page-title h1 {
+  margin-bottom: 22px;
 }
-.node-type-evenement .panel-2col .panel-col-first{
+.node-type-evenement .panel-2col .panel-col-first {
   float: left;
   width: 60%;
-
 }
-.node-type-evenement .panel-2col .panel-col-last{
+.node-type-evenement .panel-2col .panel-col-last {
   float: left;
   width: 40%;
-
 }
 
-.node-type-evenement .panel-col-first .pane-entity-field{
+.node-type-evenement .panel-col-first .pane-entity-field {
   background: #ffffff;
-
 }
 .node-type-evenement .panel-col-first .pane-node-field-date-de-debut,
 .node-type-evenement .panel-col-first .pane-node-field-date-de-fin,
@@ -2285,51 +2792,69 @@ table.views-table{
 .node-type-evenement .panel-col-first .pane-node-field-cibles-evenement,
 .node-type-evenement .panel-col-first .pane-node-field-type-evenement,
 .node-type-evenement .panel-col-first .pane-node-field-corps-de-texte,
-.node-type-evenement .panel-col-first .pane-node-field-document-lie{
+.node-type-evenement .panel-col-first .pane-node-field-document-lie {
   background: #ffffff;
   padding-left: 25px;
   padding-right: 25px;
 }
 .node-type-evenement .panel-col-first .pane-node-field-cibles-evenement,
-.node-type-evenement .panel-col-first .pane-node-field-type-evenement{
-  position: relative; top: 5px; left: 5px;
+.node-type-evenement .panel-col-first .pane-node-field-type-evenement {
+  position: relative;
+  top: 5px;
+  left: 5px;
 }
-.node-type-evenement .panel-col-first .pane-node-field-media-rattache{
+.node-type-evenement .panel-col-first .pane-node-field-media-rattache {
   margin: 0px;
 }
-.node-type-evenement .panel-col-first .field-name-field-date-de-debut .field-label,
-.node-type-evenement .panel-col-first .field-name-field-date-de-fin .field-label{
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-date-de-debut
+  .field-label,
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-date-de-fin
+  .field-label {
   font-size: 1.4rem;
   font-size: 14px;
   font-family: arial;
   font-weight: bold;
   display: block;
-
 }
-.node-type-evenement .panel-col-first .pane-node-field-horaires .field-name-field-horaires
-.field-items .field-item {
-  height: 38px; width: 137px;
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-horaires
+  .field-name-field-horaires
+  .field-items
+  .field-item {
+  height: 38px;
+  width: 137px;
 }
-.node-type-evenement .panel-col-first .field-name-field-date-de-debut  .date-display-single,
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-date-de-debut
+  .date-display-single,
 .node-type-evenement .panel-col-first .pane-node-field-horaires .field-item,
-.node-type-evenement .panel-col-first .field-name-field-date-de-fin  .date-display-single{
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-date-de-fin
+  .date-display-single {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: georgia;
   font-style: italic;
 }
-.node-type-evenement .panel-col-first .field-name-field-date-de-debut ,
+.node-type-evenement .panel-col-first .field-name-field-date-de-debut,
 .node-type-evenement .panel-col-first .field-name-field-date-de-fin {
   display: block;
   width: 150px;
   padding-top: 17px;
   padding-bottom: 17px;
 }
-.node-type-evenement .panel-col-first .field-name-field-date-de-fin:after{
+.node-type-evenement .panel-col-first .field-name-field-date-de-fin:after {
   content: '';
   height: 161px;
   width: 4px;
-  background: url("../images/styles/bg_dashed_horizontal_blue.png") 0 0 repeat-y;
+  background: url('../images/styles/bg_dashed_horizontal_blue.png') 0 0 repeat-y;
   position: relative;
   top: -154px;
   right: -153px;
@@ -2337,186 +2862,281 @@ table.views-table{
   visibility: visible !important;
 }
 
-.node-type-evenement .panel-col-first .field-name-field-type-evenement .field-item{
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-type-evenement
+  .field-item {
   position: relative;
   top: -333px;
   left: 166px;
   border-right: 2px solid #ececec;
   width: 64px;
 }
-.node-type-evenement .panel-col-first .field-name-field-cibles-evenement .field-item{
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-cibles-evenement
+  .field-item {
   position: relative;
   top: -350px;
   left: 236px;
-
 }
 .node-type-evenement .panel-col-first .field-name-field-cibles-evenement,
-.node-type-evenement .panel-col-first .field-name-field-type-evenement{
+.node-type-evenement .panel-col-first .field-name-field-type-evenement {
   width: auto;
   padding: 0 10px;
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-
 }
 
-.node-type-evenement .panel-col-first .field-name-field-corps-de-texte .field-item{
+.node-type-evenement
+  .panel-col-first
+  .field-name-field-corps-de-texte
+  .field-item {
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 27px;
   line-height: 2.7rem;
 }
-.node-type-evenement .panel-col-first .pane-node-field-corps-de-texte{
+.node-type-evenement .panel-col-first .pane-node-field-corps-de-texte {
   position: relative;
   top: -196px;
 }
-.node-type-evenement .panel-col-first .field-name-field-corps-de-texte{
-
+.node-type-evenement .panel-col-first .field-name-field-corps-de-texte {
   padding-bottom: 25px;
   margin-bottom: 25px;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie{
+.node-type-evenement .panel-col-first .pane-node-field-document-lie {
   position: relative;
   top: -196px;
   padding-top: 25px;
 }
 
-
-.node-type-evenement .panel-col-first .pane-node-field-document-lie
-.field-name-field-fichier .file .file-info{
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-fichier
+  .file
+  .file-info {
   font-size: 11px;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie{
+.node-type-evenement .panel-col-first .pane-node-field-document-lie {
   display: block;
   float: left;
   width: 100%;
   clear: both;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie  .field-items > .field-item{
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-items
+  > .field-item {
   margin-bottom: 15px;
 
   float: left;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie  .field-items > article{
-
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-items
+  > article {
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-name-field-visuel,
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-name-field-fichier{
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-visuel,
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-fichier {
   float: left;
   display: block;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-name-field-fichier{
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-fichier {
   float: left;
   display: block;
   width: 115px;
-  padding-right:5px;
+  padding-right: 5px;
   margin-left: 20px;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-type-image .field-item{
-  display:block;
-  width:80px !important;
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-type-image
+  .field-item {
+  display: block;
+  width: 80px !important;
 }
 
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-name-field-fichier a{
-  font-size:14px;
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-fichier
+  a {
+  font-size: 14px;
   font-weight: 700;
   line-height: 0px !important;
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-name-field-fichier .file{
-
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-fichier
+  .file {
 }
-.node-type-evenement .panel-col-first .pane-node-field-document-lie .field-name-field-fichier
-.file-info{
+.node-type-evenement
+  .panel-col-first
+  .pane-node-field-document-lie
+  .field-name-field-fichier
+  .file-info {
   display: block;
 }
-.node-type-evenement .panel-col-first .pane-evenement-panel-pane-1{
+.node-type-evenement .panel-col-first .pane-evenement-panel-pane-1 {
   background: #fff;
   position: relative;
   top: -150px;
   float: left;
   padding: 20px 25px;
 }
-.node-type-evenement .panel-col-first .prochain-event .view-mode-mise_en_avant  .submitted,
-.node-type-evenement .panel-col-first .prochain-event .view-mode-mise_en_avant  .field-name-field-media-rattache header,
-.node-type-evenement .panel-col-first .prochain-event .links{
-  display:none;
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .view-mode-mise_en_avant
+  .submitted,
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .view-mode-mise_en_avant
+  .field-name-field-media-rattache
+  header,
+.node-type-evenement .panel-col-first .prochain-event .links {
+  display: none;
 }
 
-.node-type-evenement .panel-col-first .prochain-event .view-mode-mise_en_avant  .node-title	{
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .view-mode-mise_en_avant
+  .node-title {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   width: 111px;
 }
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-corps-de-texte .field-item {
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-corps-de-texte
+  .field-item {
   width: 111px;
 }
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-corps-de-texte .field-item p,
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-corps-de-texte .field-items .field-item{
-  font-size:11px;
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-corps-de-texte
+  .field-item
+  p,
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-corps-de-texte
+  .field-items
+  .field-item {
+  font-size: 11px;
 }
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-corps-de-texte .field-items .field-item{
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-corps-de-texte
+  .field-items
+  .field-item {
   line-height: 19px;
 }
-.node-type-evenement .panel-col-first .prochain-event{
-  float:left;
-  width:100%;
+.node-type-evenement .panel-col-first .prochain-event {
+  float: left;
+  width: 100%;
 }
-.node-type-evenement .panel-col-first .prochain-event .view-content > .views-row{
-  width:220px;
-  float:left;
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .view-content
+  > .views-row {
+  width: 220px;
+  float: left;
 }
 
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-media-rattache .field-name-field-visuel{
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-media-rattache
+  .field-name-field-visuel {
   display: block;
   margin-right: 20px;
   width: 80px !important;
 }
-.node-type-evenement .panel-col-first .prochain-event .node-evenement > header{
-  width:125px;
-  float:right;
+.node-type-evenement .panel-col-first .prochain-event .node-evenement > header {
+  width: 125px;
+  float: right;
 }
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-media-rattache{
-  width:80px;
-  float:left;
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-media-rattache {
+  width: 80px;
+  float: left;
 }
-.node-type-evenement .panel-col-first .prochain-event .node-evenement > .field-name-field-date-de-debut{
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .node-evenement
+  > .field-name-field-date-de-debut {
   padding: 0;
   float: left;
   width: 110px;
   margin: 5px 0 5px 13px;
 }
-.node-type-evenement .panel-col-first .prochain-event .field-name-field-corps-de-texte .field-items >.field-item{
-  width:110px;
-  float:left;
-  margin-left:13px;
+.node-type-evenement
+  .panel-col-first
+  .prochain-event
+  .field-name-field-corps-de-texte
+  .field-items
+  > .field-item {
+  width: 110px;
+  float: left;
+  margin-left: 13px;
 }
 /******************************sidebar*******************************************************/
-.node-type-evenement .panel-col-last .inside{
-  background:#fff;
-  float:left;
-  padding:25px;
+.node-type-evenement .panel-col-last .inside {
+  background: #fff;
+  float: left;
+  padding: 25px;
   width: 100%;
 }
-.node-type-evenement .panel-col-last .pane-node-field-geolocalisation{
+.node-type-evenement .panel-col-last .pane-node-field-geolocalisation {
   float: right;
-  position: relative; top: 18px;
+  position: relative;
+  top: 18px;
 }
-.node-type-evenement .panel-col-last .pane-node-field-lieu-evenement{
-  width:33%;
+.node-type-evenement .panel-col-last .pane-node-field-lieu-evenement {
+  width: 33%;
   font-size: 1.3rem;
   float: left;
-  position: relative; top: -5px;
+  position: relative;
+  top: -5px;
 }
-.node-type-evenement .panel-col-last .pane-node-field-niveau-acces{
-  width:33%;
+.node-type-evenement .panel-col-last .pane-node-field-niveau-acces {
+  width: 33%;
   font-size: 1.3rem;
   float: left;
-  position: relative; top: 10px; left: -142px;
+  position: relative;
+  top: 10px;
+  left: -142px;
 }
-.node-type-evenement .panel-col-last .pane-node-field-horaires{
-  width:33%;
+.node-type-evenement .panel-col-last .pane-node-field-horaires {
+  width: 33%;
   float: left;
   font-family: georgia;
   font-size: 1.6rem;
@@ -2524,47 +3144,76 @@ table.views-table{
   padding-bottom: 3px;
   padding-top: 7px;
 }
-.node-type-evenement .panel-col-last .pane-node-field-lieu-evenement h2{
+.node-type-evenement .panel-col-last .pane-node-field-lieu-evenement h2 {
   font-size: 1.7rem;
 }
-.node-type-evenement .panel-col-last .pane-node-field-lieu-evenement .field-name-field-lieu-evenement .node-lieu h3{
+.node-type-evenement
+  .panel-col-last
+  .pane-node-field-lieu-evenement
+  .field-name-field-lieu-evenement
+  .node-lieu
+  h3 {
   font-size: 1.7rem;
   font-weight: 600;
 }
-.node-type-evenement .panel-col-last .field-name-field-lieu-evenement .field-name-field-adresse-1{
-  margin-top:5px;
-  margin-bottom:5px;
+.node-type-evenement
+  .panel-col-last
+  .field-name-field-lieu-evenement
+  .field-name-field-adresse-1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.node-type-evenement .panel-col-last .field-name-field-lieu-evenement .field-name-field-ville,
-.node-type-evenement .panel-col-last.field-name-field-lieu-evenement .field-name-field-code-postal{
-  float:left;
+.node-type-evenement
+  .panel-col-last
+  .field-name-field-lieu-evenement
+  .field-name-field-ville,
+.node-type-evenement
+  .panel-col-last.field-name-field-lieu-evenement
+  .field-name-field-code-postal {
+  float: left;
   margin-right: 5px;
-  position: relative; top: -3px;
+  position: relative;
+  top: -3px;
 }
-.node-type-evenement .panel-col-last .field-name-field-lieu-evenement .field-name-field-ville{
+.node-type-evenement
+  .panel-col-last
+  .field-name-field-lieu-evenement
+  .field-name-field-ville {
   width: 140px;
 }
 /******************************************************************************/
-.page-recherche-offres-de-soin .message-medecin{
+.page-recherche-offres-de-soin .message-medecin {
   padding: 20px 0;
 }
 
 /*Custom page espace-multimedia */
-#views-exposed-form-espace-multimedia-panel-pane-espace-multimedia > div > div > div #edit-keys-wrapper{
+#views-exposed-form-espace-multimedia-panel-pane-espace-multimedia
+  > div
+  > div
+  > div
+  #edit-keys-wrapper {
   width: 40%;
 }
-.views-exposed-form .views-exposed-widget .form-text{
+.views-exposed-form .views-exposed-widget .form-text {
   width: 360px;
 }
-#views-exposed-form-espace-multimedia-panel-pane-espace-multimedia > div > div > div #edit-type-1-wrapper {
+#views-exposed-form-espace-multimedia-panel-pane-espace-multimedia
+  > div
+  > div
+  > div
+  #edit-type-1-wrapper {
   padding-top: 1em;
 }
-#views-exposed-form-espace-multimedia-panel-pane-espace-multimedia > div > div > div .views-submit-button {
+#views-exposed-form-espace-multimedia-panel-pane-espace-multimedia
+  > div
+  > div
+  > div
+  .views-submit-button {
   margin-top: 0em;
 }
 /*page association*/
 
-.node-association .field-name-field-actions > .field-label{
+.node-association .field-name-field-actions > .field-label {
   color: #00a2e0;
   font-size: 30px;
   font-size: 3rem;
@@ -2573,73 +3222,72 @@ table.views-table{
   margin-bottom: 20px;
 }
 .pane-node-body .pane-title,
-#panels-ipe-paneid-656 .pane-title{
+#panels-ipe-paneid-656 .pane-title {
   display: none;
 }
-.node-type-association #panels-ipe-paneid-656 .pane-title{
+.node-type-association #panels-ipe-paneid-656 .pane-title {
   display: block;
 }
 /*block adresse */
-.colonne-droite .custom-node-right{
+.colonne-droite .custom-node-right {
   padding: 30px 10px;
   overflow: hidden;
 }
-.colonne-droite .node-bloc-auto-promotion .texte-col-un{
+.colonne-droite .node-bloc-auto-promotion .texte-col-un {
   padding: 0px;
 }
-.colonne-droite .custom-node-right  .field-label {
+.colonne-droite .custom-node-right .field-label {
   font-weight: bold;
   color: #0063af;
   text-transform: uppercase;
 }
-.colonne-droite .panel-pane{
+.colonne-droite .panel-pane {
   background: #eff9fe;
 }
 .colonne-droite .custom-node-right #cross-content h4,
-.colonne-droite .custom-node-right #cross-content a{
-  color:  #0063af;
+.colonne-droite .custom-node-right #cross-content a {
+  color: #0063af;
 }
 
 /* Page diapo*/
-.node-type-diaporama .pane-page-content{
+.node-type-diaporama .pane-page-content {
   padding-top: 0px;
 }
-.diaporama-detail .view-aphp-diaporama .node-photo .field-name-field-image{
+.diaporama-detail .view-aphp-diaporama .node-photo .field-name-field-image {
   margin: 0 !important;
 }
 
 /*Bloc custom contacter le service de presse de l'AP-HP' */
-.colonne-droite li{
-  background: url("../images/icon/fleche-bleu.png") 0px 4px no-repeat;
+.colonne-droite li {
+  background: url('../images/icon/fleche-bleu.png') 0px 4px no-repeat;
   list-style: none;
   padding-left: 35px;
   margin-bottom: 10px;
 }
-.colonne-droite ul.contextual-links li{
+.colonne-droite ul.contextual-links li {
   background: none;
 }
 .colonne-droite ul {
-  padding: 0 0 0 0px
+  padding: 0 0 0 0px;
 }
-.coordonnees-service-presse h2{
+.coordonnees-service-presse h2 {
   color: #153d8a;
 }
-#edit-submitted-acceptation-des-conditions-dusage{
+#edit-submitted-acceptation-des-conditions-dusage {
   margin-left: 22px;
 }
 
-.pane-gtranslate{
+.pane-gtranslate {
   float: right;
   overflow: hidden;
 }
-
 
 /* NODE TYPE NEWSLETTER */
 .node-type-external-newsletter h1,
 .node-type-external-newsletter .pane-aphp-page-tools {
   display: none;
 }
-.view-newsletters-list h2{
+.view-newsletters-list h2 {
   font-size: 26px;
 }
 .view-newsletters-list .field-name-field-date {
@@ -2648,21 +3296,24 @@ table.views-table{
 .view-newsletters-list .date-display-single:hover {
   text-decoration: underline;
 }
-.view-newsletters-list .node-external-newsletter > a:hover .date-display-single {
+.view-newsletters-list
+  .node-external-newsletter
+  > a:hover
+  .date-display-single {
   text-decoration: underline;
 }
 
 /* Bloc Newsletter */
 .panel-pane.pane-block.pane-simplenews.inscription-newsletter {
-  background: #003F8F;
-  color: #FFFFFF;
+  background: #003f8f;
+  color: #ffffff;
 }
-.inscription-newsletter h2.pane-title{
-  color: #FFFFFF;
+.inscription-newsletter h2.pane-title {
+  color: #ffffff;
   font-size: 20px !important;
-    text-align: center;
+  text-align: center;
 }
-.inscription-newsletter input#edit-mail{
+.inscription-newsletter input#edit-mail {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -2670,36 +3321,35 @@ table.views-table{
   width: 170px;
   margin-left: 7px;
 }
-.inscription-newsletter input#edit-submit{
+.inscription-newsletter input#edit-submit {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
-      position: inherit;
-    margin-left: 5px;
-    width: 95px;
-    margin-top: 4px;
-    margin-bottom: 30px;
+  position: inherit;
+  margin-left: 5px;
+  width: 95px;
+  margin-top: 4px;
+  margin-bottom: 30px;
 }
 .form-item.form-type-textfield.form-item-mail {
   margin-top: 0px;
-    float: left;
-  
+  float: left;
 }
 
 /* remove subscription */
 #simplenews-confirm-removal-form #edit-submit {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 /* Newsletter inscription page */
 #simplenews-subscriptions-page-form .fieldset-description {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 #simplenews-subscriptions-page-form div#edit-newsletters {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 #simplenews-subscriptions-page-form input#edit-subscribe {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 #simplenews-subscriptions-page-form fieldset#edit-subscriptions {
   border: none;
