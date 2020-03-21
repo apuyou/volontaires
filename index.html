@@ -202,66 +202,377 @@
                         <h2 class="pane-title">Inscription</h2>
 
                         <div
-                          class="view view-aphp-voir-aussi view-id-aphp_voir_aussi view-display-id-panel_pane_voir_aussi view-dom-id-72260b9601d79810d81ea71997553e4d"
+                          class="form-container view view-aphp-voir-aussi view-id-aphp_voir_aussi view-display-id-panel_pane_voir_aussi view-dom-id-72260b9601d79810d81ea71997553e4d"
                         >
                           <div class="attachment attachment-before">
                             <div
                               class="view view-aphp-voir-aussi view-id-aphp_voir_aussi view-display-id-attachment_voir_aussi_entity_ref"
                             >
-                              <form
-                                action="/"
-                                method="post"
-                                id="inscription"
-                                accept-charset="UTF-8"
+                              <div
+                                role="form"
+                                class="wpcf7"
+                                id="wpcf7-f7-o1"
+                                lang="fr-FR"
+                                dir="ltr"
                               >
-                                <div>
-                                  <div
-                                    class="form-item form-type-textfield form-item-keywords"
-                                  >
-                                    <label for="name">Nom et prénom</label>
+                                <div class="screen-reader-response"></div>
+                                <form
+                                  action="/#wpcf7-f7-o1"
+                                  method="post"
+                                  class="wpcf7-form"
+                                  novalidate="novalidate"
+                                >
+                                  <div style="display: none;">
                                     <input
-                                      type="text"
-                                      id="name"
-                                      name="name"
-                                      value=""
+                                      type="hidden"
+                                      name="_wpcf7"
+                                      value="7"
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="_wpcf7_version"
+                                      value="5.1.7"
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="_wpcf7_locale"
+                                      value="fr_FR"
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="_wpcf7_unit_tag"
+                                      value="wpcf7-f7-o1"
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="_wpcf7_container_post"
+                                      value="0"
                                     />
                                   </div>
-                                  <div
-                                    class="form-item form-type-textfield form-item-keywords"
-                                  >
-                                    <label for="email">Mail</label>
-                                    <input
-                                      type="email"
-                                      id="email"
-                                      name="email"
-                                      value=""
-                                    />
-                                  </div>
-                                  <div
-                                    class="form-item form-type-textfield form-item-keywords"
-                                  >
-                                    <label for="name">Numéro de portable</label>
-                                    <input
-                                      type="text"
-                                      id="phone"
-                                      name="phone"
-                                      value=""
-                                    />
-                                    <div class="description">
-                                      Lorem ipsum dolor sit amet consectetur
-                                      adipisicing elit.
-                                    </div>
-                                  </div>
-                                  <div>
+                                  <p>
+                                    <label>
+                                      Nom (obligatoire)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap your-name"
+                                        ><input
+                                          type="text"
+                                          name="your-name"
+                                          value=""
+                                          size="40"
+                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                      /></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Prénom (obligatoire)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap your-surname"
+                                        ><input
+                                          type="text"
+                                          name="your-surname"
+                                          value=""
+                                          size="40"
+                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                      /></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Email (obligatoire)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap your-email"
+                                        ><input
+                                          type="email"
+                                          name="your-email"
+                                          value=""
+                                          size="40"
+                                          class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                      /></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Numéro de Portable (obligatoire)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap your-phonenumber"
+                                        ><input
+                                          type="number"
+                                          name="your-phonenumber"
+                                          value=""
+                                          class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                      /></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Où êtes vous confinés ? (Préciser la ville
+                                      et l'arrondissement si Paris)
+                                      (obligatoire)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap your-location"
+                                        ><input
+                                          type="text"
+                                          name="your-location"
+                                          value=""
+                                          size="40"
+                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                      /></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Quels sont vos domaines de compétence ?
+                                      (En lien avec vos expériences passées)
+                                      (obligatoire)</label
+                                    >
+                                    <span
+                                      class="wpcf7-form-control-wrap your-skills"
+                                      ><span
+                                        class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"
+                                        ><span class="wpcf7-list-item first"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Communication"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Communication</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Etudes et Questionnaires"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Etudes et Questionnaires</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Informatique et Dev"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Informatique et Dev</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Gestion de Projet"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Gestion de Projet</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Pédagogie et Formation"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Pédagogie et Formation</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Biologie"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Biologie</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Couture"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Couture</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Data Science"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Data Science</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Logistique et Gestion des Stocks et Transport"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Logistique et Gestion des Stocks
+                                              et Transport</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Secourisme en dehors du PSC1"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Secourisme en dehors du
+                                              PSC1</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Traduction"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Traduction</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="UX Design"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >UX Design</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Videos et Tutos"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Videos et Tutos</span
+                                            ></label
+                                          ></span
+                                        ><span class="wpcf7-list-item last"
+                                          ><label
+                                            ><input
+                                              type="checkbox"
+                                              name="your-skills[]"
+                                              value="Autre"
+                                            /><span
+                                              class="wpcf7-list-item-label"
+                                              >Autre</span
+                                            ></label
+                                          ></span
+                                        ></span
+                                      ></span
+                                    >
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Si "Autre", merci de préciser vos
+                                      compétences ici :<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap other"
+                                        ><input
+                                          type="text"
+                                          name="other"
+                                          value=""
+                                          size="40"
+                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                      /></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Pour tout commentaire qui ne rentrait pas
+                                      dans les lignes précédentes... ;)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap your-comment"
+                                        ><textarea
+                                          name="your-comment"
+                                          cols="40"
+                                          rows="10"
+                                          class="wpcf7-form-control wpcf7-textarea"
+                                          aria-invalid="false"
+                                        ></textarea
+                                      ></span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      Consentement (obligatoire)<br />
+                                      <span
+                                        class="wpcf7-form-control-wrap acceptance-741"
+                                        ><span
+                                          class="wpcf7-form-control wpcf7-acceptance"
+                                          ><span class="wpcf7-list-item"
+                                            ><label
+                                              ><input
+                                                type="checkbox"
+                                                name="acceptance-741"
+                                                value="1"
+                                                aria-invalid="false"
+                                              /><span
+                                                class="wpcf7-list-item-label"
+                                                >J'accepte que mes données
+                                                personnelles soient utilisées
+                                                dans le cadre de ce collectif de
+                                                volontaire Covid-19 AP-HP.</span
+                                              ></label
+                                            ></span
+                                          ></span
+                                        ></span
+                                      >
+                                    </label>
+                                  </p>
+                                  <p>
                                     <input
                                       type="submit"
-                                      name="op"
-                                      value="Envoyer"
-                                      class="form-submit"
-                                    />
-                                  </div>
-                                </div>
-                              </form>
+                                      value="Je m'inscris"
+                                      class="wpcf7-form-control wpcf7-submit"
+                                      disabled=""
+                                    /><span class="ajax-loader"></span>
+                                  </p>
+                                  <div
+                                    class="wpcf7-response-output wpcf7-display-none"
+                                  ></div>
+                                </form>
+                              </div>
                             </div>
                           </div>
                         </div>
