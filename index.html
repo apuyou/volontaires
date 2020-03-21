@@ -11,15 +11,8 @@
       content="Volontariat pour aider l'AP-HP pendant la crise COVID19"
     />
 
-    <meta
-      property="og:image"
-      content="https://www.aphp.fr/sites/default/files/merci_.jpg"
-    />
-    <link
-      rel="shortcut icon"
-      href="./sites/default/files/favico.png"
-      type="image/png"
-    />
+    <meta property="og:image" content="/img/volontaires.png" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
     <meta
       name="description"
       content="Les applaudissements en live depuis la maternité de @hopitalbichat nous donne l’énergie des habitants de @mairie18paris . Merci. @SFAR_ORG @AJAnesthRea pic.twitter.com/D1eiHEVGgF"
@@ -222,28 +215,27 @@
                         class="panel-pane pane-entity-field pane-node-field-chapo"
                       >
                         <div
+                          class="field field-name-field-image field-type-image field-label-hidden"
+                        >
+                          <div class="field-items">
+                            <div class="field-item even">
+                              <img
+                                src="/img/volontaires.png"
+                                width="896"
+                                height="504"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
                           class="field field-name-field-chapo field-type-text-long field-label-hidden"
                         >
                           <div class="field-items">
                             <div class="field-item even">
                               Lorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Aenean et dolor non erat porttitor viverra
-                              non vel mauris. Pellentesque pulvinar viverra
-                              ligula quis lobortis. Nulla hendrerit, tellus eget
-                              facilisis elementum, ligula felis molestie ante,
-                              ut eleifend diam dolor eu diam. Pellentesque
-                              commodo tortor ac ipsum imperdiet, id tempus arcu
-                              venenatis. Praesent iaculis mattis sollicitudin.
-                              Donec ut felis aliquet tortor ornare blandit et ut
-                              ante. Nunc arcu est, dignissim eget elit non,
-                              elementum faucibus eros. Duis fermentum magna
-                              felis, at accumsan tortor congue non. Curabitur ac
-                              luctus turpis, quis porttitor nisl. Vivamus
-                              aliquam tincidunt velit, ac luctus arcu dignissim
-                              at. Etiam vel ullamcorper justo. Sed tristique
-                              nisl a nibh maximus, quis sodales lorem molestie.
-                              Aenean in augue dapibus quam maximus varius vitae
-                              eget lorem. Donec id laoreet turpis.
+                              non vel mauris.
                             </div>
                           </div>
                         </div>
@@ -252,7 +244,23 @@
                         <div
                           class="field field-name-body field-type-text-with-summary field-label-hidden"
                         >
-                          <div class="field-items"></div>
+                          Cras gravida magna velit, id eleifend ex efficitur
+                          sed. Fusce faucibus maximus risus sed aliquet.
+                          Maecenas augue ipsum, maximus vitae porta ut, molestie
+                          nec risus. Nam rutrum urna in dolor fermentum, vel
+                          maximus felis placerat. Praesent dictum risus sed
+                          cursus commodo. Aenean augue justo, aliquam ac lorem
+                          sit amet, scelerisque facilisis est. Nunc faucibus
+                          augue vel rutrum dignissim. Donec elementum placerat
+                          tortor, nec convallis enim suscipit vitae. Aliquam
+                          dignissim sodales justo, in ultrices enim egestas sit
+                          amet. Quisque feugiat posuere mi, ut gravida orci.
+                          Nullam sit amet feugiat nisi, fermentum efficitur
+                          lacus. Pellentesque vulputate ultricies dapibus.
+                          Phasellus molestie ornare justo sit amet auctor.
+                          Integer molestie a magna non consequat. Cras non augue
+                          urna. Praesent vitae justo id nisi cursus eleifend sit
+                          amet non justo.
                         </div>
                       </div>
                       <div
@@ -270,40 +278,52 @@
                               <form
                                 action="/"
                                 method="post"
-                                id="aphp-search-ads-form"
+                                id="inscription"
                                 accept-charset="UTF-8"
                               >
                                 <div>
                                   <div
                                     class="form-item form-type-textfield form-item-keywords"
                                   >
-                                    <label for="name">Nom et prénom </label>
+                                    <label for="name">Nom et prénom</label>
                                     <input
-                                      class="aphp-search-autocomplete form-text ui-autocomplete-input"
                                       type="text"
                                       id="name"
                                       name="name"
                                       value=""
-                                      size="60"
-                                      maxlength="128"
                                     />
                                   </div>
                                   <div
-                                    class="form-item form-type-select form-item-hospitals"
+                                    class="form-item form-type-textfield form-item-keywords"
                                   >
-                                    <div class="description">
-                                      Select the desired hospital
-                                    </div>
+                                    <label for="email">Mail</label>
+                                    <input
+                                      type="email"
+                                      id="email"
+                                      name="email"
+                                      value=""
+                                    />
                                   </div>
                                   <div
-                                    class="form-actions form-wrapper"
-                                    id="edit-actions"
+                                    class="form-item form-type-textfield form-item-keywords"
                                   >
+                                    <label for="name">Numéro de portable</label>
+                                    <input
+                                      type="text"
+                                      id="phone"
+                                      name="phone"
+                                      value=""
+                                    />
+                                    <div class="description">
+                                      Lorem ipsum dolor sit amet consectetur
+                                      adipisicing elit.
+                                    </div>
+                                  </div>
+                                  <div>
                                     <input
                                       type="submit"
-                                      id="edit-submit"
                                       name="op"
-                                      value="OK"
+                                      value="Envoyer"
                                       class="form-submit"
                                     />
                                   </div>
