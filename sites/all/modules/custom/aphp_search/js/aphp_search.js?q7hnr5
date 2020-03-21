@@ -1,0 +1,345 @@
+(function ($) {
+  Drupal.behaviors.aphpSearch = {
+    attach: function (context, settings) {
+
+      data = settings.aphpSearch;
+
+      // Toolbar
+      $('.sidebar-wrapper ul.menu .search').bind('click', function () {
+        if ($('#aphp-search-block-form:visible').css('visibility') === 'visible') {
+          $('#aphp-search-block-form input[name="keywords"]').focus();
+        }
+      });
+
+      // Facettes
+      var facetLimit = 10;
+
+      if ($('.aphp-search-page #facet-consultation').length) {
+        if (!$('.search-facets').length) {
+          $('.aphp-search-page .sidebar').append('<div class="search-facets"><span class="title">Affiner votre recherche</span></div>');
+        }
+
+        $('.aphp-search-page #facet-consultation').insertAfter($('.aphp-search-page .search-facets > span.title'));
+      }
+
+      $('.aphp-search-page .facet ul li a').each(function () {
+        $(this).click(function () {
+          $(this).parent('li').siblings('li').find('a.checked').removeClass('checked');
+        });
+      });
+
+      $('.aphp-search-page .facet > ul').each(function () {
+        if ($('li', this).length > facetLimit) {
+          $('li:gt(' + (facetLimit - 1) + ')', this).hide();
+          $(this).append('<li class="link-more">' +
+            '<a href="#0" class="show-more">Afficher + de valeurs</a>' +
+            '<a href="#0" class="show-less">Afficher - de valeurs</a>' +
+            '</li>');
+        }
+      });
+      $('.aphp-search-page .facet .link-more .show-less').hide();
+      $('.aphp-search-page .facet .link-more a').click(function () {
+        var classLink = 'less',
+          facets = $(this).parent('li').parent('ul').find('li:gt(' + (facetLimit - 1) + '):not(.link-more)');
+
+        $(this).hide();
+
+        if ($(this).hasClass('show-less')) {
+          classLink = 'more';
+
+          facets.hide();
+        }
+        else {
+          facets.show();
+        }
+
+        $(this).parent('.link-more').find('.show-' + classLink).show();
+      });
+
+      // Autocomplétion sur formulaire de recherche ads
+      $('#aphp-search-ads-form input[name="keywords"]').addClass('aphp-search-autocomplete');
+
+      if ($('input.aphp-search-autocomplete').length) {
+        activeAutocomplete();
+      }
+
+      //Récupération de la première spécialité si validation manuelle du formulaire
+      $('#aphp-search-ads-form').submit(data, function(event){
+        //event.preventDefault();
+        //$(this).find('input[name="keywords"]').val($('li.ui-menu-item.first > a').text());
+        //$('#aphp-search-ads-form input[name="keywords"]').attr('value', $('li.ui-menu-item.first > a').text());
+      });
+
+      function activeAutocomplete() {
+        var form = $('input.aphp-search-autocomplete').parents('form');
+        var feed = form.find('input[name="feed"]').val();
+        var path = form.find('input[name="path"]').val();
+
+        var itemRegistry = {};
+
+
+        //if (typeof $('input.aphp-search-autocomplete').autocomplete === 'function') {
+        var search_box = $('input.aphp-search-autocomplete');
+        //Mise en avant du terme recherché (avec mark.js) dans les résultats de recherche
+        search_box.on('autocompleteopen', function(event, ui) {
+          $('.ui-autocomplete .ui-menu-item a').mark($(event.target).val());
+        });
+        search_box.autocomplete({
+
+          source: function (request, response) {
+            $.getJSON(data.autocomplete_path + '/' + request.term + '/' + feed, response);
+          },
+          select: function (event, ui) {
+            event.preventDefault();
+            //Let's find the original target...
+            var currentEvent = event;
+            while(typeof currentEvent.originalEvent !== 'undefined') {
+              currentEvent = currentEvent.originalEvent;
+            }
+
+            var link = $(currentEvent.target);
+            var item = itemRegistry[link.attr('data-item-id')];
+            $(this).val(item.value);
+            var uri = '';
+            switch(item.cat) {
+              case 'medecin':
+                uri = '/offre-de-soin/medecin/' + item._id;
+                break;
+              case 'service':
+                /*console.log(item._source.etab_multiples);
+                if(item._source.etab_multiples){
+                  if($.isArray(item._source.etab_multiples)){
+                    uri = '/service/service-' + item._source.s_serv + '-' + item._source.etab_multiples[item._source.etab_multiples.length - 1];
+                  }
+                  else{
+                    uri = '/service/service-' + item._source.s_serv + '-' + item._source.etab_multiples;
+                  }
+                }
+                else{*/
+                  uri = '/service/service-' + item._source.s_serv + '-' + item._source.etab.id;
+                //}
+                break;
+              case 'speciality':
+                uri = path + '?query=' + encodeURIComponent(item.value.replace(/\//i, '\\/'));
+                break;
+            }
+            window.location = uri;
+          },
+          response: function (event, ui) {
+            // if (ui.length > 15) {
+            //   ui = ui.slice(0, 14);
+            // }
+            return ui;
+          },
+          open: function(event, ui) {
+          },
+          create: function (event, ui) {
+            $(this).data('ui-autocomplete')._renderMenu = function (ul, items) {
+              var that = this;
+              var currentCategory = "";
+              $.each(items, function (index, item) {
+                if (typeof item.category !== 'undefined' && item.category !== currentCategory) {
+                  var catHeader = "";
+                  if(item.count === true){
+                    catHeader += "<li class='ui-autocomplete-category'>" + item.category + "<a class='see-more' href='recherche/offres-de-soin?query=" + item.keywords + "'>" + Drupal.t('See all') + "</a></li>";
+                  }
+                  else{
+                    catHeader = "<li class='ui-autocomplete-category'>" + item.category + "</li>";
+                  }
+                  ul.append(catHeader);
+                  currentCategory = item.category;
+                }
+                that._renderItemData(ul, item);
+              });
+            }
+            $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
+              var itemRenderer = function(item) {
+                var content = '';
+                switch (item.cat) {
+                  case 'medecin':
+                    item._source.metier === undefined ? item._source.metier = " " : item._source.metier = item._source.metier;// + ' | ';
+                    content = item._source.titre + ' ' + item._source.concat_prenom_nom + '<br>' + item._source.metier.charAt(0).toUpperCase() + item._source.metier.slice(1).toLowerCase();// + item._source.etab.adr2;
+                    break;
+                  case 'service':
+                    content = item._source.titre + ' ';
+                    //On n'ajoute Hopital au nom d'établissement que s'il ne figure pas déjà
+                    if((item._source.etab.lib.toLowerCase().indexOf('hôpital') === -1) && (item._source.etab.lib.toLowerCase().indexOf('hospitalisation') === -1)){
+                      content += Drupal.t('Hospital') + ' ';
+                    }
+                    content += item._source.etab.lib + ' ' + item._source.etab.adr2;
+                    break;
+                  case 'speciality':
+                    content = item.value;
+                    break;
+                }
+                //Génération du lien de résultat avec mise en avant du terme recherché (avec mark.js)
+                var link = $('<a class="ui-corner-all" tabindex="-1">' + content + '</a>').mark(search_box.val());
+                if(typeof item._id !== 'undefined') {
+                  var id = item.cat + '___' + item._id;
+                  itemRegistry[id] = item;
+                  link.attr('data-item-id', id);
+                }
+                return $("<li>")
+                  .addClass('ui-menu-item')
+                  .attr('role', 'presentation')
+                  .append(link);
+              };
+
+              var pagingLinkRenderer = function(item) {
+                var link = $('<a class="ui-corner-all offset-link" data-offset="' + item.offset + '" data-category="' + item.cat + '" tabindex="-1" href="' + item.url + '">' + item.value + '</a>');
+                link.click(function(event) {
+                  event.preventDefault();
+                  var that = $(this);
+                  $.getJSON($(this).attr('href'), null, function(data) {
+                    for(var i = 0; i < data.length; i++) {
+                      item = data[i];
+                      if(item.cat == that.attr('data-category') && typeof item.offset === 'undefined') {
+                        var li = itemRenderer(item);
+                        //li.insertBefore(that.parent());
+                        li.insertBefore(that);
+                      }
+                      else if(item.cat == that.attr('data-category') && typeof item.offset !== 'undefined') {
+                        var li = pagingLinkRenderer(item);
+                        //li.insertBefore(that.parent());
+                        li.insertBefore(that);
+                      }
+                    }
+                    //that.parent().detach();
+                    that.detach();
+                  });
+                  return false;
+                });
+                return(link);
+                /*return $("<li>")
+                  .addClass('ui-menu-item')
+                  .attr('role', 'presentation')
+                  .append(link);*/
+              }
+
+              if(typeof item.offset === 'undefined') {
+                return itemRenderer(item)
+                  .appendTo(ul);
+              }
+              else {
+                return pagingLinkRenderer(item)
+                  .appendTo(ul);
+              }
+            }
+          }
+          //minLength: 3
+        });
+        //}
+      }
+
+      // Evolutions 2.2
+      // 7.1 Page intermédiaire de résultats
+      function equalize_zone_2_3() {
+        if (jQuery(window).width() >= 768) {
+          var zone_2_height = jQuery('#results-zone-2').outerHeight(true);
+          var zone_3_height = jQuery('#results-zone-3').outerHeight(true);
+          if (zone_2_height > zone_3_height) {
+            jQuery('#results-zone-3').height(zone_2_height);
+          } else {
+            jQuery('#results-zone-2').height(zone_3_height);
+          }
+        }
+      }
+
+      // égalisation des zones 2 et 3
+      jQuery(window).load(function () {
+        equalize_zone_2_3();
+      });
+
+      jQuery(window).resize(function () {
+        equalize_zone_2_3();
+      });
+
+
+      //Bouton de modification de la recherche
+      $('.search-ads-tab').click(function(){
+        $('.aphp-global-search-button-container').click();
+      });
+      $('.search-drupal-tab').click(function(){
+        $('.aphp-global-search-button-container').click();
+        $('#search-drupal-tab').click();
+      });
+
+      //Query avec données de geoloc updatées injectée dans l'input caché car impossible directement dans le select si les données de session déjà générées
+      var form = $('#aphp-search-sort-radio-form');
+      if(sessionStorage.getItem('lat') && sessionStorage.getItem('lon')){
+        form.find('input[name*="geoloc-value"]').attr('value', 'etab.localisation,geo_distance,' + sessionStorage.getItem('lat') + ',' + sessionStorage.getItem('lon') + ',ASC');
+      }
+
+      //Validation automatique du tri des resultats de recherche de contenus
+      form.find('input[type=radio]').change(function(e){
+        e.preventDefault();
+        if($(this).val().indexOf('etab.localisation') !== -1){
+          if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function success(pos) {
+              var crd = pos.coords;
+              //Sauvegarde de la geoloc en données de session lors du 1er clic sur le tri de geoloc
+              sessionStorage.setItem('lat', crd.latitude);
+              sessionStorage.setItem('lon', crd.longitude);
+              //Query avec données de geoloc updatées injectée dans l'input caché car impossible directement dans le select
+              form.find('input[name*="geoloc-value"]').attr('value', 'etab.localisation,geo_distance,' + crd.latitude + ',' + crd.longitude + ',ASC');
+              form.submit();
+
+            }, function error(err) {
+              if (err.code === err.PERMISSION_DENIED){
+                alert("Vous n’avez pas autorisé votre géolocalisation, nous ne pouvons pas ordonnancer les résultats en fonction de votre position.");
+              }
+            });
+          }
+          else{
+            alert('Votre navigateur ne supporte pas la géolocalisation.');
+          }
+        }
+        else{
+          form.submit();
+        }
+
+
+      });
+
+      //Test impression de la map sur Page Service avec JQuery Print
+      /*$('body.page-service').find('.localisation').find('.download-map').click(function(e){
+        e.preventDefault();
+        $("#map-canvas").print({
+          globalStyles: false,
+          mediaPrint: true,
+          stylesheet: null,
+          noPrintSelector: ".no-print",
+          iframe: true,
+          append: '<div>',
+          prepend: '</div>',
+          manuallyCopyFormValues: false,
+          deferred: $.Deferred(),
+          timeout: 750,
+          title: null,
+          doctype: '<!doctype html>'
+        });
+      });*/
+
+      //Décocher tout sur facettes des listes de résultats de recherche
+      var cleanUrl = function(urlArray){
+        urlArray.forEach(function(item, index){
+          var isFilter = item.indexOf("filter");
+          if (isFilter !== -1){
+            urlArray.splice(index, 1);
+            cleanUrl(urlArray);
+          }
+        });
+      };
+
+      var block = $('.sidebar .ads-search-facets-wrapper');
+      block.find('span[class="right"]').click(function (e) {
+        block.find('a[class="active"]').attr('class', 'inactive');
+        var currentUrl = window.location.href;
+        var urlArray = currentUrl.split('&');
+        cleanUrl(urlArray);
+        window.location.href = urlArray.join('&');
+      });
+
+    }
+  };
+})(jQuery);

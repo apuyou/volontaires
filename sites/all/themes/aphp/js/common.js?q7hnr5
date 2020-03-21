@@ -1,0 +1,384 @@
+(function ($, Drupal, window, document) {
+  "use strict";
+
+  $(document).ready(function () {
+    // Evolutions 2.2
+    // 9.1 Modification du menu principal
+    $.fn.exist = function () {
+      return this.length > 0;
+    };
+
+    // Manage the positioning of the header logo. When we have 3 buttons in the
+    // header, the logo if floating on the right. If we have less, it's centered
+    // in the page.
+    if ($('.pane-aphp-global-aphp-header-button-menu > .menu > li').length < 3) {
+      $('.pane-page-logo').addClass('centered');
+    }
+
+    // Manage the auto complete with additional space on top. Since it's placed
+    // in JavaScript, we have to overload it like so.
+    $("#edit-keywords").autocomplete({
+      open: function(event, ui) {
+        var $autocomplete = $('ul.ui-autocomplete');
+
+        $autocomplete.css('top', function(index, value) {
+          return 20 + parseInt(value)
+        });
+
+        $autocomplete.find('li:first-child').addClass('first');
+        $autocomplete.find('li:last-child').addClass('last');
+      }
+    });
+
+    setTimeout(function() {
+      $(window).trigger('resize');
+    }, 50);
+
+    // Jump to navigation link
+    $('#skip-link a').bind('click', function () {
+      $('#accessible-nav a').toggleClass('element-invisible element-focusable');
+    });
+
+    // Page content
+    $('#accessible-nav a:nth-child(3)').bind('click', function () {
+      $('html,body').animate({scrollTop: 240}, 500);
+    });
+
+    // liste de démarches
+    $('.page-demarches .view-demarches h3').each(function () {
+      $(this).nextUntil('h3').wrapAll('<div class="demarche-container"/>');
+    });
+
+    // ajout de la flèche
+    $('.page-demarches .view-demarches .views-row .views-field-title').append('<span class="toggle_demarche" />')
+
+    // click sur un titre
+    $('.page-demarches .view-demarches .views-row .views-field-title').click(function () {
+      // fermeture des autres slides
+      $(this).parent().siblings('.views-row').removeClass('opened').children('.views-field-body, .views-field-field-visuel').slideUp();
+
+      // ouverture/fermeture de la slide sur laquelle on a cliqué
+      if ($(this).siblings('.views-field-field-visuel').html() != null) {
+        $(this).siblings('.views-field-field-visuel').slideToggle();
+      }
+      $(this).siblings('.views-field-body').slideToggle().parent().toggleClass('opened');
+    });
+
+    // Votre séjour
+    $('.votre-sejour .node-formulaire-webform .webform-client-form').submit(function () {
+      var Query = $('.votre-sejour #edit-submitted-nom-de-votre-hopital').val();
+      Query = Query.replace(' ', '+');
+      window.location.replace('/recherche?afs:query=' + Query + '&filter=type="hopital"&afs:filter=type="hopital"');
+      return false;
+    });
+
+
+    // Vidéo détail
+    function terms_links_change() {
+      var $body = $('body');
+      if (!$body.hasClass('video-detail') && !$body.hasClass('audio-detail') && !$body.hasClass('diaporama-detail')) {
+        return;
+      }
+
+      var body_class = '';
+      if ($body.hasClass('video-detail')) {
+        body_class = '.video-detail';
+      }
+      else if ($body.hasClass('audio-detail')) {
+        body_class = '.audio-detail';
+      }
+      else if ($body.hasClass('diaporama-detail')) {
+        body_class = '.diaporama-detail';
+      }
+
+      var loop_number = $(body_class + ' .pan=e-node-field-thematique .taxonomy-term').length;
+
+      for (var i = 1; i <= loop_number; i++) {
+        var id = $(body_class + ' .pane-node-field-thematique .taxonomy-term').eq(i - 1).attr('id');
+        var decoupe = id.split('-');
+        var term_id = decoupe[decoupe.length - 1];
+        var term_link = '/espace-multimedia?field_thematique_tid=' + term_id;
+
+        $(body_class + ' .pane-node-field-thematique #' + id + ' h2 a').attr('href', term_link);
+      }
+    }
+
+    terms_links_change();
+
+    // toggle map interest list
+    $('.pane-aphp-carto-page .display-list').click(function () {
+      $(this).hide().siblings('.hospital_group').slideDown(300).siblings('.hide-list').show();
+    });
+    $('.pane-aphp-carto-page .hide-list').click(function () {
+      $(this).hide().siblings('.hospital_group').slideUp(300).siblings('.display-list').show();
+    });
+
+    // toggle facets
+    $('.aphp-search-page .content .sidebar .search-facets .facet .label').click(function () {
+      $(this).closest('.facet').toggleClass('closed').children('ul').slideToggle(300);
+    });
+
+    // toggle secondary menu header second breakpoint
+    $('.panel-col-top .pane-menu-menu-secondaire').prepend('<span id="toggle_menu" class="toggle_menu"><span class="bar-icon"/><span class="bar-icon"/><span class="bar-icon"/></span>');
+    $('#toggle_menu').click(function () {
+      $(this).siblings('.menu-block-wrapper').slideToggle(300).parent().toggleClass('opened');
+    });
+
+    // toggle menu header mobile
+    $('.panel-col-top').prepend('<span id="toggle_menu_mobile" class="toggle_menu toggle_menu_mobile"><span class="bar-icon"/><span class="bar-icon"/><span class="bar-icon"/></span>');
+    $('#toggle_menu_mobile').click(function () {
+      $(this).siblings('.inside').slideToggle(300).parent().toggleClass('opened');
+    });
+
+    // Publications : applique le lien de téléchargement sur la vignette et le
+    // titre
+    function download_link_application() {
+      var downloadLink = '';
+
+      for (var i = 0; i <= 3; i++) {
+
+        downloadLink = $('.publications .view-publications .views-row .views-field-download a').eq(i).attr('href');
+        $('.publications .view-publications .views-row .views-field-field-visuel a').eq(i).attr('href', downloadLink);
+        $('.publications .view-publications .views-row .views-field-title a').eq(i).attr('href', downloadLink);
+      }
+    }
+
+    download_link_application();
+
+    Drupal.behaviors.newPublications = {
+      attach: function (context, settings) {
+        download_link_application();
+      }
+    };
+
+    // Espace multimédia
+
+    // reset de la facette type
+    $('#facetapi-facet-search-apimultimedia-block-type > li').each(function () {
+      if ($(this).children('a').css('display') == 'none') {
+        $(this).children('a').css('display', 'inline-block');
+
+        // on récupère que le texte de 1er niveau
+        var tag = $(this)
+            .clone()
+            .children()
+            .remove()
+            .end()
+            .text();
+
+        // réécriture du lien
+        $(this).children('a').text(tag);
+
+        var link = $(this).children('a');
+        $(this).html(link);
+        $(this).addClass('facetapi-checked');
+      }
+    });
+
+    // on cache les mot-clés sur lesquels on a cliqué
+    $('#facetapi-facet-search-apimultimedia-block-field-video-keywords > li').each(function () {
+      if ($(this).children('a').css('display') == 'none') {
+        $(this).hide();
+      }
+    });
+
+    // lien vers le diaporama pour les vignette de type field_media_rattache
+    $('.view-id-multimedia .views-row').each(function () {
+      var url = $(this).find('.views-field-title a').attr('href');
+      $(this).find('.field-type-image img').wrap('<a href="' + url + '"></a>');
+    });
+
+    // déplacement de la facette type
+    $('#block-facetapi-61xk2jgkgkqnpl0s50burbrjukyjnael').insertAfter('#edit-search-api-views-fulltext-wrapper');
+
+    // actualités colonne de droite des rubriques
+    var image_height = $('#views_slideshow_cycle_main_aphp_actualite-panel_pane_col_right_rubrique img').height();
+
+    $('#views_slideshow_controls_text_previous_aphp_actualite-panel_pane_col_right_rubrique, #views_slideshow_controls_text_next_aphp_actualite-panel_pane_col_right_rubrique').css({'top': image_height / 2 - 35});
+
+    // À voir aussi
+    if ($('.view-id-aphp_voir_aussi').height() == 0) {
+      $('#panels-ipe-paneid-662').hide(); // utilisateur connecté
+      $('.pane-aphp-voir-aussi-panel-pane-voir-aussi').hide();
+    }
+
+    // Captcha
+    $('.webform-client-form .captcha').prepend('<h4>CAPTCHA</h4>');
+
+    // gtranslate
+    // réparation au scotch pour le bouton français qui met le site en anglais
+    // quand on clique dessus la 1ère fois
+    $('.pane-gtranslate > a[title="French"]').click(function () {
+      if ($('.panel-col-top .pane-menu-menu-secondaire li:first-child a').text() == 'Nous connaître') {
+        return false;
+      }
+    });
+    $('.pane-gtranslate > a[title="English"]').click(function () {
+      if ($('.panel-col-top .pane-menu-menu-secondaire li:first-child a').text() == 'Know us') {
+        return false;
+      }
+    });
+    // suppression du style inline
+    $('.pane-gtranslate > a[title="French"], .pane-gtranslate > a[title="français"], .pane-gtranslate > a[title="English"], .pane-gtranslate > a[title="Anglais"]').attr('style', '');
+
+
+    //bannière prise de rdv
+    $('.panel-col-top .inside .pane-aphp-banni-re').insertBefore('#toggle_menu_mobile');
+
+    var $color = $('.views-field-field-url-rdv-online > .field-content > div');
+    var colorText = $color.attr('data-colortext');
+    var colorFond = $color.attr('data-colorfond');
+
+    $('.views-field-field-url-rdv-online').css('background-color', colorFond);
+    $('.views-field-field-url-rdv-online> .field-content > div > a').css('color', colorText);
+
+    var winWidth = $(window).width();
+    var elementWidth = $('.pane-aphp-banni-re').width();
+    var marginData = ((winWidth - elementWidth) / 2) + 'px';
+
+    $('.pane-aphp-banni-re').css({
+      marginLeft: '-' + marginData,
+      marginRight: '-' + marginData
+    });
+
+    var resizeTimeout = false;
+    $(window).resize(function () {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resizeApply, 100);
+    });
+
+    function resizeApply() {
+      $('.pane-aphp-banni-re').css({
+        marginLeft: '0',
+        marginRight: '0'
+      });
+      var winWidth = $(window).width();
+      var elementWidth = $('.pane-aphp-banni-re').width();
+      var marginData = ((winWidth - elementWidth) / 2) + 'px';
+
+      $('.pane-aphp-banni-re').css({
+        marginLeft: '-' + marginData,
+        marginRight: '-' + marginData
+      });
+
+      // Rework header.
+      var $panel = $('.panel-col-top .pane-aphp-global-aphp-header-button-menu');
+      if (winWidth >= 1280) {
+        $panel.insertAfter($('.panel-col-top .pane-aphp-global-aphp-main-menu-button'));
+      }
+      else {
+        $panel.appendTo('.panel-col-top > .inside');
+      }
+    }
+
+    // lien PDF
+    $('.ckeditor-pdf > a').each(function () {
+      var text = $(this).text();
+      text += '<br>PDF';
+      $(this).html(text);
+    });
+
+    // Rework social blocks. We put a tiny timeout to avoid rendering issues.
+    setTimeout(function() {
+      var height = 0;
+      var $panels = $('#mini-panel-social_networks .panel-pane');
+
+      $panels.each(function () {
+        if ($(this).height() > height) {
+          height = $(this).height();
+        }
+      });
+
+      $panels.css('height', height + 'px');
+    }, 10);
+  });
+
+
+  $(window).load(function () {
+    // égalisation des hauteurs
+    if ($(window).width() >= 768) {
+      // if ($(window).width() >= 782) {
+      // zone de contenu avec la colonne cross-content
+      var sidebarHeight = $('.panels-flexible-region-node-canevas-sidebar').height();
+
+      var centerHeight = $('.panels-flexible-region-node-canevas-center').height();
+
+      if (centerHeight < sidebarHeight) {
+        $('.panels-flexible-region-node-canevas-center').height(sidebarHeight);
+      }
+    }
+
+    // désactivation des liens vers le service dans la page en question (lien
+    // vers la page courante)
+    $('body.page-service .item span.service > a').addClass('disabled').attr("href", "javascript:void(0)");
+
+    $('body.page-service .item span.service > a').click(function (e) {
+      e.preventDefault();
+    });
+
+    function slideshow_control_position(image_selector, previous_selector, next_selector) {
+      var image_height = $(image_selector).height();
+      var top = image_height / 2 - 20;
+      if (top < 0) {
+        top = 0;
+      }
+
+      $(previous_selector).css({'top': top});
+
+      $(next_selector).css({'top': top});
+    }
+
+    // diaporama embed photo
+    slideshow_control_position(
+        '.views-field-field-photo',
+        '#views_slideshow_controls_text_previous_aphp_diaporama-diaporama_embed_photo',
+        '#views_slideshow_controls_text_next_aphp_diaporama-diaporama_embed_photo'
+    );
+
+    // diaporama embed media
+    slideshow_control_position(
+        '#views_slideshow_cycle_teaser_section_aphp_diaporama-diaporama_embed .field-name-field-image img',
+        '#views_slideshow_controls_text_previous_aphp_diaporama-diaporama_embed',
+        '#views_slideshow_controls_text_next_aphp_diaporama-diaporama_embed'
+    );
+
+    // diaporama entity reference photo
+    slideshow_control_position(
+        '.view-display-id-diaporama_photo .views-field-field-photo img',
+        '#views_slideshow_controls_text_previous_aphp_diaporama-diaporama_photo',
+        '#views_slideshow_controls_text_next_aphp_diaporama-diaporama_photo'
+    );
+
+    // diaporama entity reference media
+    slideshow_control_position(
+        '.view-display-id-panel_pane_diaporama .field-name-field-image img',
+        '#views_slideshow_controls_text_previous_aphp_diaporama-panel_pane_diaporama',
+        '#views_slideshow_controls_text_next_aphp_diaporama-panel_pane_diaporama'
+    );
+
+    // diaporama detail media
+    slideshow_control_position(
+        '.view-display-id-panel_pane_diaporama_detail .field-name-field-image img',
+        '#views_slideshow_controls_text_previous_aphp_diaporama-panel_pane_diaporama_detail',
+        '#views_slideshow_controls_text_next_aphp_diaporama-panel_pane_diaporama_detail'
+    );
+
+    // diaporama detail photo
+    slideshow_control_position(
+        '.view-display-id-diaporama_detail_photo .views-field-field-photo img',
+        '#views_slideshow_controls_text_previous_aphp_diaporama-diaporama_detail_photo',
+        '#views_slideshow_controls_text_next_aphp_diaporama-diaporama_detail_photo'
+    );
+
+    // article: diaporama de publication
+    slideshow_control_position(
+        '#views_slideshow_cycle_teaser_section_aphp_document-panel_pane_1 .views-field-field-visuel',
+        '#views_slideshow_controls_text_previous_aphp_document-panel_pane_1',
+        '#views_slideshow_controls_text_next_aphp_document-panel_pane_1'
+    );
+
+    $('a[href*="facebook"], a[href*="twitter"], a[href*="youtube"], a[href*="youtu.be"]').attr('target', '_blank');
+
+  });
+
+})(jQuery, Drupal, this, this.document);

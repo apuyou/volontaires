@@ -1,0 +1,207 @@
+.pane-aphp-global-aphp-main-menu-render {
+    background-color: #e6f1f9;
+    padding-top: 1em;
+    display: none;
+}
+
+.aphp-global-main-menu-container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+.aphp-global-main-menu-first-level {
+    width: 30%;
+    float: left;
+}
+
+.aphp-global-main-menu-second-level {
+    background: white;
+    width: 70%;
+    float: right;
+}
+
+.aphp-global-main-menu-first-level,
+.aphp-global-main-menu-second-level {
+    color: #005f9d;
+}
+
+.aphp-global-main-menu-first-level .menu,
+.aphp-global-main-menu-second-level .menu {
+    padding: 0;
+    margin: 0;
+}
+
+.aphp-global-main-menu-second-level > div {
+    display: none;
+}
+
+.aphp-global-main-menu-first-level .menu > li {
+    padding: 1em 0;
+    cursor: pointer;
+}
+
+.aphp-global-main-menu-first-level .menu > li.active-trail,
+.aphp-global-main-menu-first-level .menu > li:hover {
+    background: white;
+}
+
+.aphp-global-main-menu-first-level .menu > li,
+.aphp-global-main-menu-second-level .menu > li {
+    list-style: none;
+}
+
+.aphp-global-main-menu-second-level > div > div.aphp-global-main-menu-right-column,
+.aphp-global-main-menu-second-level > div > div.aphp-global-main-menu-left-column {
+    width: 50%;
+    padding: 1em;
+}
+
+.aphp-global-main-menu-second-level > div > div.aphp-global-main-menu-right-column {
+    float: right;
+}
+
+.aphp-global-main-menu-second-level > div > div.aphp-global-main-menu-left-column {
+    float: left;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li {
+    margin-bottom: 1em;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li > a {
+    font-size: 1.1em;
+    padding: 0.5em 0;
+    display: inline-block;
+    font-family: MontSerrat, sans-serif;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li > .menu {
+    font-size: 0.9em;
+    padding-left: 0.5em;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li > .menu > li {
+    display: block;
+    padding: 0.15em 0;
+}
+
+.aphp-global-main-menu-first-level > .menu > li > span {
+    font-size: 1.3em;
+    padding: 0.5em 0 0.5em 0.5em;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: MontSerrat, sans-serif;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li a {
+    display: inline-block;
+}
+
+.aphp-global-main-menu-first-level > .menu > li.active-trail > span,
+.aphp-global-main-menu-first-level > .menu > li:hover > span {
+    color: #ff7c4c;
+    text-decoration: none;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li a.active,
+.aphp-global-main-menu-second-level > div > div > .menu > li a:hover,
+.aphp-global-main-menu-second-level > div > div > .menu > li a:active,
+.aphp-global-main-menu-second-level > div > div > .menu > li a:focus {
+    color: #ff7c4c;
+    text-decoration: none;
+}
+
+.aphp-global-main-menu-second-level > div > div > .menu > li > ul a.active,
+.aphp-global-main-menu-second-level > div > div > .menu > li > ul a:hover,
+.aphp-global-main-menu-second-level > div > div > .menu > li > ul a:active,
+.aphp-global-main-menu-second-level > div > div > .menu > li > ul a:focus {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-left: 1em;
+    border-left: 1px solid #ff7c4c;
+}
+
+/********************/
+/* MAIN MENU BUTTON */
+/********************/
+.pane-aphp-global-aphp-main-menu-button {
+    margin-top: 45px;
+    float: left;
+}
+
+.aphp-global-main-menu-button-container {
+    float: left;
+    font-family: "Open sans", sans-serif;
+    color: #0063af;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aphp-global-main-menu-button-container > .aphp-global-main-menu-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0063af;
+    border-radius: 25px;
+    float: left;
+    margin-right: 10px;
+    background: url("../images/menu.png") no-repeat center;
+}
+
+.aphp-global-main-menu-button-container.open > .aphp-global-main-menu-icon {
+    background: url("../images/close.png") no-repeat center;
+}
+
+.aphp-global-main-menu-button-container > .aphp-global-main-menu-text {
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.main-menu-social-links {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.main-menu-social-links img {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.main-menu-social-links > span {
+    color: #005f9d;
+    font-family: "Open sans", sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.main-menu-social-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu-social-links ul > li.menu__item {
+    list-style: none;
+    display: block;
+    float: left;
+}
+
+.main-menu-social-links ul > li + li {
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-menu-social-links {
+        position: relative;
+        margin: 0 auto;
+        bottom: inherit;
+        left: inherit;
+        display: block;
+        float: left;
+        width: 100%;
+        background: white;
+        padding: 1.5em 1em;
+    }
+}

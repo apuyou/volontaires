@@ -1,0 +1,247 @@
+/* page intermédiaire de résultats */
+.aphp-search-results p {
+    margin: 0;
+    padding: 0;
+}
+
+.aphp-search-results ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* mots interdits*/
+p.no-result {
+    background-color: white;
+    margin: 0;
+    margin-left: 50px;
+}
+
+#results-zone-1 .no-result {
+    padding: 1em;
+}
+
+/* zone 1*/
+#results-zone-1 #aphp-search-page-form {
+    margin-bottom: 38px;
+}
+
+#results-zone-1 #aphp-search-page-form > div {
+    overflow: hidden;
+}
+
+#results-zone-1 .form-item-keywords {
+    float: left;
+    width: 94%;
+    margin: 0;
+    border: 1px solid #5caddd;
+}
+
+#results-zone-1 #edit-keywords {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0.8em;
+    border: none;
+    height: 51px;
+    width: 100%;
+    color: #8f9192;
+}
+
+#results-zone-1 #edit-actions {
+    float: left;
+
+}
+
+#results-zone-1 #edit-submit {
+    background: url('../images/search-white.png') #5caddd no-repeat 50%;
+    height: 53px;
+    width: 60px;
+    color: transparent;
+}
+
+.aphp-search-results .spell-check {
+    margin-bottom: 1em;
+}
+
+.aphp-search-results .promotion-image {
+    margin: 0 0 1em 0;
+}
+
+/* zone 2, 3 et 4*/
+#results-zone-2,
+#results-zone-3,
+#results-zone-4 {
+    padding: 1.2em 1em;
+    position: relative;
+}
+
+.aphp-search-results .results-description {
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    color: #153d8a;
+}
+
+.aphp-search-results #results-zone-4 .results-description {
+    font-size: 20px;
+    font-size: 2.0rem;
+    margin-bottom: 35px;
+}
+
+.aphp-search-results #results-zone-3 .results-description {
+    margin-bottom: 26px;
+}
+
+.aphp-search-results #results-zone-4 .results-title {
+    margin-bottom: 15px;
+}
+
+.aphp-search-results #results-zone-3 .results-title {
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+/* absence de résultats */
+.results-nothing {
+    text-align: center;
+}
+
+/* zone 2 et 3 */
+.aphp-search-results .results-zone-2-container,
+.aphp-search-results .results-zone-3-container {
+    width: 49%;
+}
+
+.aphp-search-results .results-zone-2-container {
+    background: #99d2f2;
+    float: left;
+}
+
+.aphp-search-results .results-zone-3-container {
+    float: right;
+}
+
+/* zone 3 et 4 */
+.aphp-search-results .results-title a {
+    font-weight: bold;
+}
+
+.aphp-search-results .results-title a:hover {
+    text-decoration: underline;
+}
+
+.aphp-search-results .results-link {
+    line-height: normal;
+    word-wrap: break-word;
+    color: #2c6bb0;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.aphp-search-results p.description {
+    margin-top: 0.3em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #a5daf4;
+}
+
+.aphp-search-results a.results-all-link {
+    position: relative;
+    padding-left: 38px;
+    color: #2c6bb0;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.aphp-search-results a.results-all-link:before {
+    position: absolute;
+    content: url('../images/arrow-right-blue-black.png');
+    top: 1px;
+    left: 10px;
+}
+
+.aphp-search-results a.results-all-link:hover {
+    text-decoration: underline;
+}
+
+/* zone 2 */
+.results-zone-2-container {
+    padding-right: 0.5em;
+}
+
+#results-zone-2 .results-hospital {
+    font-weight: 700;
+    padding: 1em 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.aphp-search-results p.description:last-child,
+#results-zone-2 .results-hospital:last-child {
+    border-bottom: none;
+}
+
+#results-zone-2 li.results-hospital {
+    color: #2c6bb0;
+    font-size: 20px;
+    font-size: 2.0rem;
+    padding-bottom: 0px;
+}
+
+#results-zone-2 .results-hospital > ul {
+    margin-top: 18px;
+}
+
+#results-zone-2 .results-service {
+    margin: 0.1em 0em;
+    padding-left: 1em;
+    font-weight: normal;
+    color: #000000;
+    font-size: 17px;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+#results-zone-2 li.results-service:before {
+    content: ".";
+}
+
+#results-zone-2 {
+    background-color: #99d2f2;
+}
+
+#results-zone-2 .results-all-link {
+    margin-top: 38px;
+}
+
+/* zone 3 */
+
+#results-zone-3 {
+    background: #eef8fd;
+}
+
+/* zone 4 */
+#results-zone-4 {
+    background-color: white;
+    float: left;
+    width: 100%;
+    margin-top: 1em;
+}
+
+/* page intermédiaire responsive */
+@media only screen and (max-width: 767px) {
+    .aphp-search-results .results-zone-2-container,
+    .aphp-search-results .results-zone-3-container {
+        float: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    #results-zone-1 .form-item-keywords {
+        width: 80%;
+    }
+
+    .aphp-search-results .results-zone-2-container {
+        margin-bottom: 1em;
+    }
+}

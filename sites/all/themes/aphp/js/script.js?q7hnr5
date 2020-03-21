@@ -1,0 +1,23 @@
+(function ($, Drupal, window, document, undefined) {
+
+  "use strict";
+  Drupal.behaviors.my_custom_behavior = {
+    attach: function (context, settings) {
+      $('span.file a').each(function () {
+        $(this).html($(this).html().replace(new RegExp("&amp;#039;", 'g'), "'"));
+      });
+
+      $('img').each(function () {
+        var title = $(this).attr('title');
+        if (typeof title !== typeof undefined && title !== false) {
+          $(this).attr('title', title.replace(new RegExp("&#039;", 'g'), "'"));
+        }
+      });
+
+      $('.views-table th, .views-table td').wrapInner('<div class="cell-content"></div>');
+      $('.views-table td .cell-content').each(function () {
+        $(this).height($(this).parent().height());
+      });
+    }
+  };
+})(jQuery, Drupal, this, this.document);

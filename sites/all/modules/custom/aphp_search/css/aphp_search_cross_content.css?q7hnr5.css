@@ -1,0 +1,64 @@
+.colonne-droite .panel-pane.pane-aphp-search-cross-content-block {
+    background: white;
+}
+
+#cross-content {
+    padding: 1em;
+}
+
+#cross-content div {
+    border-top: 4px solid rgb(235, 235, 235);
+    margin-top: 24px;
+}
+
+#cross-content div:first-child {
+    border-top: none;
+    margin-top: 0;
+}
+
+#cross-content h4 {
+    line-height: 1.2;
+    margin: 16px 0;
+    word-wrap: break-word;
+}
+
+#cross-content h4 > a {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(195, 45, 62);
+    word-break: normal;
+}
+
+#cross-content p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 16px 0 16px;
+}
+
+#cross-content a {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(195, 45, 62);
+    word-break: break-all;
+}
+
+/* image vidéo */
+#cross-content img {
+    display: block;
+}
+
+#cross-content .cross-content-image {
+    position: relative;
+    border-top: none;
+    margin-top: 1em;
+}
+
+#cross-content .cross-content-image:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: url('../images/play.png');
+    margin-left: -22px;
+    margin-top: -22px;
+}

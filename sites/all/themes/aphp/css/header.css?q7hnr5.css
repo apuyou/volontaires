@@ -1,0 +1,404 @@
+/**********/
+/* BANNER */
+/**********/
+
+.pane-aphp-banni-re {
+  position: relative;
+  z-index: 1000;
+}
+
+/**************************/
+/* MAIN MENU QUICK SELECT */
+/**************************/
+
+.pane-aphp-global-aphp-main-menu-quick-select {
+  background: #0063af;
+  color: white;
+  padding: 0.8em 0;
+  position: relative;
+  clear: both;
+  text-align: center;
+}
+.pane-aphp-global-aphp-main-menu-quick-select:after {
+  left: 100%;
+}
+.pane-aphp-global-aphp-main-menu-quick-select li p.description {
+  display: none;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul {
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  display: inline;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul > li {
+  text-align: left;
+  text-transform: uppercase;
+  display: inline;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul > li > span {
+  padding: 0.4em 1.5em;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul > li + li > span {
+  border-left: 1px solid white;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul > li > span.arrow:after {
+  position: absolute;
+  content: '';
+  background: url("../images/styles/picto_arrow.png") center no-repeat;
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  right: 0;
+  top: 0;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul > li > span {
+  display: inline;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+.pane-aphp-global-aphp-main-menu-quick-select > ul > li > span:hover {
+  color: #5bc5f2;
+}
+.pane-aphp-global-aphp-main-menu-quick-select:before {
+  background: url("../images/styles/picto_arrow.png") right no-repeat;
+  content: "Vous êtes";
+  display: inline;
+  font-size: 1.3em;
+  text-transform: none;
+  padding: 0 2.5em 0 0;
+  position: relative;
+  margin-right: 0;
+  font-style: italic;
+}
+
+
+/**************/
+/*** HEADER ***/
+/**************/
+
+.panel-col-top {
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+.panel-col-top .pane-accessibility-menu {
+  float: right;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  height: 17px;
+}
+
+.panel-col-top > .inside {
+  max-width: 1295px;
+  margin: auto;
+  position: relative;
+}
+
+.panel-col-top > .inside > .pane-gtranslate-gtranslate {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pane-page-logo {
+  display: block;
+  position: relative;
+  width: 300px;
+  margin: 35px;
+  float: right;
+}
+
+.pane-page-logo.centered {
+  float: none;
+  padding-top: 35px;
+  margin: 0 auto;
+}
+
+/***************/
+/* BUTTON MENU */
+/***************/
+.pane-aphp-global-aphp-header-button-menu {
+  float: right;
+  margin: 40px 0;
+}
+
+.pane-aphp-global-aphp-header-button-menu > ul.menu {
+  margin: 0;
+}
+
+.pane-aphp-global-aphp-header-button-menu > ul > li {
+  display: block;
+  float: left;
+}
+
+.pane-aphp-global-aphp-header-button-menu > ul > li + li {
+  margin-left: 15px;
+}
+
+.pane-aphp-global-aphp-header-button-menu > ul > li > a {
+  display: block;
+  padding: 6px 15px;
+  background-color: #0063af;
+  color: white;
+  font-weight: 600;
+}
+
+.pane-aphp-global-aphp-header-button-menu > ul > li > a > img {
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-right: 10px;
+}
+
+.pane-aphp-global-aphp-header-button-menu > ul > li > a > span {
+  display: inline-block;
+  float: left;
+  margin: 6px 0;
+}
+
+/*****************/
+/* SEARCH BUTTON */
+/*****************/
+.pane-aphp-global-aphp-search-button {
+  margin-top: 45px;
+  float: right;
+}
+
+.aphp-global-search-button-container {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #0063af;
+  border-radius: 25px;
+  margin-right: 10px;
+  background: url("../images/search_blue.png") no-repeat center;
+  cursor: pointer;
+}
+
+/**************/
+/* SEARCH BAR */
+/**************/
+.panel-col-top > .inside > div.pane-aphp-search-block-form {
+  z-index: 100;
+  display: none;
+}
+
+.pane-aphp-search-block-form {
+  float: right;
+  right: 0;
+  top: 70px;
+  position: absolute;
+  max-width: 560px;
+  width: 100%;
+  left: 50%;
+}
+
+.aphp-search-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(84, 143, 211, 0.52);
+  content: ' ';
+  z-index: 1;
+  cursor: pointer;
+}
+
+.pane-aphp-search-block-form > form {
+  z-index: 2;
+  position: relative;
+  left: -50%;
+}
+
+.pane-aphp-search-block-form > form .form-item-keywords {
+  position: relative;
+  z-index: 2;
+}
+
+.pane-aphp-search-block-form > form .form-item-keywords:before {
+  background: url("../images/search_blue.png") no-repeat center;
+  position: absolute;
+  left: 10px;
+  content: ' ';
+  height: 40px;
+  width: 40px;
+  top: 5px;
+}
+
+.pane-aphp-search-block-form > form .form-item-keywords > input {
+  border: 2px solid #0063af;
+  border-radius: 40px;
+  height: 50px;
+  padding-left: 60px;
+  color: #0063af;
+  width: 600px;
+  max-width: 100%;
+}
+
+.pane-aphp-search-block-form > form > div {
+  position: relative;
+  max-width: 560px;
+}
+
+.pane-aphp-search-block-form > form > div > .form-actions {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  z-index: 3;
+}
+
+.pane-aphp-search-block-form > form > div > .form-actions > input {
+  background-color: #0063af;
+  border-radius: 25px;
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  font-family: icons;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/***********************/
+/* SEARCH AUTOCOMPLETE */
+/***********************/
+.ui-autocomplete {
+  background: #e6f1f9;
+  border-radius: 25px;
+  border: none;
+  padding: 0;
+}
+
+.ui-autocomplete > li.ui-menu-item + li.ui-menu-item:after {
+  content: ' ';
+  width: 90%;
+  margin: auto;
+  height: 1px;
+  background-color: #0063af;
+}
+
+.ui-autocomplete > li.ui-menu-item > a {
+  color: #0063af;
+  display: inline-block;
+  width: 100%;
+  border-radius: 0;
+  padding: 10px 15px;
+}
+
+.ui-autocomplete > li.ui-menu-item.last {
+  overflow: hidden;
+  border-radius: 0 0 25px 25px;
+}
+
+.ui-autocomplete > li.ui-menu-item.see-more-ac-item {
+  background-color: #7996c0;
+}
+
+.ui-autocomplete > li.ui-menu-item.see-more-ac-item > a {
+  color: white;
+}
+
+ul.ui-autocomplete > li.ui-menu-item > a.ui-state-focus {
+  background: #0063af;
+  color: #e6f1f9;
+  border: none;
+}
+
+.ui-autocomplete:before {
+  content: '\25b2';
+  color: #e6f1f9;
+  font-size: 2em;
+  position: absolute;
+  top: -0.8em;
+  left: 0.8em;
+  z-index: -1;
+}
+
+.ui-autocomplete > li.ui-menu-item.first > a {
+  border-radius: 25px 25px 0 0;
+}
+
+.ui-autocomplete > li.ui-menu-item.last > a {
+  border-radius: 0 0 25px 25px;
+  display: block;
+}
+
+/**************/
+/* CLEARFIXES */
+/**************/
+.pane-aphp-global-aphp-header-button-menu > ul > li > a:after,
+.panel-col-top > .inside:after,
+.pane-aphp-global-aphp-header-button-menu > ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/**************/
+/* RESPONSIVE */
+/**************/
+
+@media screen and (max-width: 1280px) {
+  .pane-aphp-global-aphp-header-button-menu {
+    float: none;
+    padding: 0 35px;
+    margin: 0 0 10px 0;
+  }
+  .pane-aphp-global-aphp-header-button-menu ul {
+    padding: 0;
+    text-align: center;
+  }
+  .pane-aphp-global-aphp-header-button-menu > ul > li {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+    margin-bottom: 10px;
+  }
+  .pane-page-logo {
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 30px 0;
+    clear: left;
+  }
+
+  .pane-aphp-global-aphp-main-menu-button {
+    margin-left: 15px;
+    z-index: 1;
+  }
+
+  .pane-aphp-global-aphp-main-menu-button .aphp-global-main-menu-button-container {
+    margin-left: 10px;
+  }
+
+  .pane-aphp-global-aphp-search-button {
+    margin-right: 15px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pane-page-logo {
+    padding-top: 15px;
+  }
+
+  .aphp-global-search-button-container {
+    float: right;
+  }
+
+  .pane-aphp-global-aphp-main-menu-button {
+    width: 50%;
+    float: left;
+    margin: 35px 0 0 0;
+  }
+
+  .pane-aphp-global-aphp-search-button {
+    width: 50%;
+    float: right;
+    margin: 35px 0 0 0;
+  }
+}
