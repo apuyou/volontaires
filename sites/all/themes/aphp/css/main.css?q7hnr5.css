@@ -3496,3 +3496,13 @@ form#inscription input[type="submit"] {
 form#inscription input[type="submit"]:hover, form#inscription input[type="submit"]:focus {
   background-color: #1abeff;
 }
+
+#volontaires-menu div {
+  padding: 7px 11px;
+  color: #fff;
+  background: #153d8a;
+  font-family: inherit;
+  font-size: 17px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
