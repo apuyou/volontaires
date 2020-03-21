@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,800);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
 /* HTML element (SMACSS base) rules */
 @import 'normalize.css';
 
@@ -10,9 +10,9 @@
   font-family: 'icons';
   src: url('font/fontello.eot%3F98333103');
   src: url('font/fontello.eot%3F98333103') format('embedded-opentype'),
-  url('font/fontello.woff%3F98333103') format('woff'),
-  url('font/fontello.ttf%3F98333103') format('truetype'),
-  url('font/fontello.svg%3F98333103') format('svg');
+    url('font/fontello.woff%3F98333103') format('woff'),
+    url('font/fontello.ttf%3F98333103') format('truetype'),
+    url('font/fontello.svg%3F98333103') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,10 +20,10 @@
   font-family: 'Montserrat';
   src: url('font/montserrat-regular-webfont.eot');
   src: url('font/montserrat-regular-webfont.eot%3F') format('embedded-opentype'),
-  url('font/montserrat-regular-webfont.woff2') format('woff2'),
-  url('font/montserrat-regular-webfont.woff') format('woff'),
-  url('font/montserrat-regular-webfont.ttf') format('truetype'),
-  url('font/montserrat-regular-webfont.svg') format('svg');
+    url('font/montserrat-regular-webfont.woff2') format('woff2'),
+    url('font/montserrat-regular-webfont.woff') format('woff'),
+    url('font/montserrat-regular-webfont.ttf') format('truetype'),
+    url('font/montserrat-regular-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,10 +31,10 @@
   font-family: 'MontserratBold';
   src: url('font/montserrat-bold-webfont.eot');
   src: url('font/montserrat-bold-webfont.eot%3F') format('embedded-opentype'),
-  url('font/montserrat-bold-webfont.woff2') format('woff2'),
-  url('font/montserrat-bold-webfont.woff') format('woff'),
-  url('font/montserrat-bold-webfont.ttf') format('truetype'),
-  url('font/montserrat-bold-webfont.svg') format('svg');
+    url('font/montserrat-bold-webfont.woff2') format('woff2'),
+    url('font/montserrat-bold-webfont.woff') format('woff'),
+    url('font/montserrat-bold-webfont.ttf') format('truetype'),
+    url('font/montserrat-bold-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -361,71 +361,6 @@ body .node-canevas .panels-flexible-region-inside {
 
 /** Page Newsletter */
 
-/* Custom AP */
-
-.form-container form {
-  margin: 0 42px;
-}
-
-.form-container form input,
-.form-container form textarea {
-  height: 55px;
-  background: white;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 4px transparent;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #003e8f;
-  font-size: 17px;
-  transition: box-shadow 0.15s ease-in-out 0s;
-  width: 100%;
-  padding: 0 17px;
-}
-
-.form-container form textarea {
-  height: 150px;
-  width: 100%;
-}
-
-.form-container form input:focus,
-.form-container form textarea:focus {
-  box-shadow: 0 0 4px #666;
-}
-
-.form-container form input[type='submit'] {
-  color: white;
-  font-weight: bold;
-  background: #00a5e6;
-  cursor: pointer;
-  box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.1) inset;
-  transition: background-color 0.15s ease-in-out 0s,
-    transform 0.1s ease-in-out 0s, box-shadow 0.1s ease-in-out 0s;
-}
-
-.form-container form input[type='submit']:hover {
-  background-color: #1abeff;
-}
-
-.form-container form input[type='checkbox'] {
-  width: 17px;
-  height: 17px;
-  margin-right: 10px;
-}
-
-.form-container .wpcf7-list-item-label {
-  font-weight: normal;
-}
-
-#volontaires-menu div {
-  padding: 7px 11px;
-  color: #fff;
-  background: #153d8a;
-  font-family: inherit;
-  font-size: 17px;
-  text-transform: none;
-  margin-bottom: 20px;
-}
 /**
  * @file
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
@@ -741,3 +676,78 @@ body {
   }
 }
 /* Iphone 5 */
+
+/* Custom AP */
+
+.form-container form {
+  margin: 0 42px;
+}
+
+.form-container form input,
+.form-container form textarea {
+  height: 55px;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 4px transparent;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #003e8f;
+  font-size: 17px;
+  transition: box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  padding: 0 17px;
+}
+
+.form-container form textarea {
+  height: 150px;
+  width: 100%;
+}
+
+.form-container form input:focus,
+.form-container form textarea:focus {
+  box-shadow: 0 0 4px #666;
+}
+
+.form-container form input[type='submit'] {
+  color: white;
+  font-weight: bold;
+  background: #00a5e6;
+  cursor: pointer;
+  box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.1) inset;
+  transition: background-color 0.15s ease-in-out 0s,
+    transform 0.1s ease-in-out 0s, box-shadow 0.1s ease-in-out 0s;
+}
+
+.form-container form input[type='submit']:hover {
+  background-color: #1abeff;
+}
+
+.form-container form input[type='checkbox'] {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
+
+.form-container .wpcf7-list-item-label {
+  font-weight: normal;
+}
+
+#volontaires-menu div {
+  padding: 7px 11px;
+  color: #fff;
+  background: #153d8a;
+  font-family: inherit;
+  font-size: 17px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-container form {
+    margin: 0 21px;
+  }
+  .pane-aphp-voir-aussi-panel-pane-voir-aussi h2 {
+    padding-left: 21px;
+  }
+}
