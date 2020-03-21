@@ -3314,9 +3314,6 @@ article .field-name-field-reference-dailymotion #media-dailymotion-1 {
 .views-field-field-url-rdv-online > .field-content > div > a p {
   margin: 0;
 }
-.views-field-field-url-rdv-online > .field-content > div img {
-  margin-right: 1em;
-}
 .views-field-field-url-rdv-online > .field-content > div > a:hover {
   text-decoration: underline;
 }
@@ -3520,4 +3517,8 @@ body.node-type-external-newsletter .panel-display > .panel-col-top-menu {
   font-size: 17px;
   text-transform: none;
   margin-bottom: 20px;
+}
+
+.banner-donate {
+  width: 833px;
 }
