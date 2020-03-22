@@ -679,7 +679,8 @@ body {
 
 /* Custom AP */
 
-.form-container form {
+.form-container form,
+.faq-container {
   margin: 0 42px;
 }
 
@@ -743,11 +744,24 @@ body {
   margin-bottom: 20px;
 }
 
+.faq-container .faq-question {
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+.faq-container .faq-answer {
+  margin-bottom: 25px;
+}
+
 @media only screen and (max-width: 767px) {
-  .form-container form {
+  .form-container form,
+  .faq-container {
     margin: 0 21px;
   }
   .pane-aphp-voir-aussi-panel-pane-voir-aussi h2 {
     padding-left: 21px;
+  }
+
+  #volontaires-menu {
+    display: none;
   }
 }
