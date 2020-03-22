@@ -744,6 +744,10 @@ body {
   margin-bottom: 20px;
 }
 
+#volontaires-menu-mobile {
+  display: none;
+}
+
 .faq-container .faq-question {
   font-weight: bold;
   margin-bottom: 17px;
@@ -763,6 +767,26 @@ body {
 
   #volontaires-menu {
     display: none;
+  }
+
+  #volontaires-menu-mobile {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+
+  #volontaires-menu-mobile div {
+    padding: 7px 20px;
+    color: #fff;
+    background: #153d8a;
+    font-family: inherit;
+    font-size: 17px;
+    text-transform: none;
+    margin-right: 10px;
+  }
+
+  .panel-flexible-inside .panels-flexible-region-first {
+    padding: 20px 0px 0px;
   }
 }
 
